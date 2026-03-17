@@ -1,9 +1,12 @@
 import React from 'react';
-import { Moon, Sun, Globe } from 'lucide-react';
+import { Moon, Sun, Globe, BookOpen } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useAppContext } from '../context/AppContext';
 
 const Header = () => {
-  const { theme, toggleTheme, lang, setLang } = useAppContext();
+  const { theme, toggleTheme, lang, setLang, isPremium } = useAppContext();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLangChange = (e) => {
     setLang(e.target.value);
@@ -23,6 +26,21 @@ const Header = () => {
         </div>
         
         <div className="controls">
+          {isPremium && (
+            <button
+              className={`nav-link ${location.pathname === '/recursos' ? 'active' : ''}`}
+              onClick={() => navigate(location.pathname === '/recursos' ? '/' : '/recursos')}
+              title={lang === 'es' ? 'Recursos Premium' : 'Premium Resources'}
+            >
+              <BookOpen size={18} />
+              <span className="nav-link-text">
+                {location.pathname === '/recursos'
+                  ? (lang === 'es' ? 'Mapa' : 'Roadmap')
+                  : (lang === 'es' ? 'Recursos' : 'Resources')}
+              </span>
+            </button>
+          )}
+          
           <div className="lang-selector">
             <Globe size={18} className="icon" />
             <select value={lang} onChange={handleLangChange}>
