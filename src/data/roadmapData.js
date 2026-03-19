@@ -40,7 +40,7 @@ export const roadmapContent = [
         },
         description: {
           es: 'Por qué: Las redes sociales pueden fallar, pero tu lista de correos es tuya.\n\nPaso a paso: Usa herramientas como MailerLite. Crea una página de aterrizaje sencilla (Landing Page) donde ofrezcas un "imán de prospectos" gratis (ej. el primer capítulo de tu libro, un mapa de tu mundo fantástico o una escena extra) a cambio de que dejen su correo electrónico.\n\n✨ ¿Te abruma la parte técnica? En Bookish Alchemy AI Studio diseñamos Landing Pages estéticas y estratégicas que convierten visitantes en lectores obsesionados con tus historias. ¡No pelees con el código! Escríbenos a nuestro Instagram y lo hacemos por ti.',
-          en: 'Why: Social media can fail, but your email list is yours.\n\nStep by step: Use tools like MailerLite. Create a simple landing page and offer a free lead magnet in exchange for their email.\n\n✨ Overwhelmed by the tech? At Bookish Alchemy AI Studio we design aesthetic Landing Pages that convert visitors into readers obsessed with your stories.'
+          en: 'Why: Social media can fail, but your email list is yours.\n\nStep by step: Use tools like MailerLite. Create a simple landing page where you offer a free "lead magnet" (e.g., the first chapter of your book, a map of your fantasy world, or a bonus scene) in exchange for their email.\n\n✨ Overwhelmed by the tech? At Bookish Alchemy AI Studio we design aesthetic and strategic Landing Pages that convert visitors into readers obsessed with your stories. Don\'t fight the code! Write us on Instagram and we\'ll do it for you.'
         }
       },
       {
@@ -64,7 +64,7 @@ export const roadmapContent = [
         },
         description: {
           es: 'Por qué: Nunca imprimas mil libros sin ver cómo lucen los colores y los márgenes en papel.\n\nPaso a paso: Sube el PDF de tu manuscrito formateado y la portada a tu panel de Amazon KDP (como borrador). Ve a las opciones del libro y selecciona "Solicitar copia de prueba". Te enviarán un ejemplar físico con una banda de "No para la venta" para que revises errores.',
-          en: 'Why: Never print a thousand books without seeing how colors and margins look on paper.\n\nStep by step: Upload the PDF of your formatted manuscript and cover to your Amazon KDP panel (as a draft). Select "Request proof copy". They\'ll send you a physical copy with a "Not for Sale" band so you can review errors.'
+          en: 'Why: Never print a thousand books without seeing how colors and margins look on paper.\n\nStep by step: Upload the PDF of your formatted manuscript and cover to your Amazon KDP panel (as a draft). Go to the book options and select "Request proof copy". They\'ll send you a physical copy with a "Not for Sale" band so you can review errors.'
         }
       }
     ]
@@ -87,7 +87,7 @@ export const roadmapContent = [
         },
         description: {
           es: 'Por qué: Necesitas reseñas en Amazon el Día 1 para que el algoritmo te tome en serio.\n\nPaso a paso: Crea un Google Forms. Pregunta el nombre, correo y enlaces a sus perfiles de Instagram/TikTok/Goodreads. Publica el enlace en tus redes invitando a tus seguidores a ser los primeros en leer tu novela a cambio de dejar una reseña en la semana de lanzamiento.',
-          en: 'Why: You need reviews on Amazon on Day 1 for the algorithm to take you seriously.\n\nStep by step: Create a Google Form. Ask for name, email, and links to their Instagram/TikTok/Goodreads profiles. Post the link inviting followers to read your novel in exchange for a review during launch week.'
+          en: 'Why: You need reviews on Amazon on Day 1 for the algorithm to take you seriously.\n\nStep by step: Create a Google Form. Ask for name, email, and links to their Instagram/TikTok/Goodreads profiles. Post the link on your social media inviting your followers to be the first to read your novel in exchange for leaving a review during launch week.'
         }
       },
       {
@@ -99,7 +99,7 @@ export const roadmapContent = [
         },
         description: {
           es: 'Por qué: Calentar a la audiencia sin revelar demasiado genera anticipación.\n\nPaso a paso: Ve a Canva. Crea un video vertical (Reel/TikTok) o un carrusel usando imágenes estéticas que representen la vibra del libro (ej. lluvia, una daga, una taza de café). Agrega una frase intrigante de tu novela. Usa etiquetas específicas en minúsculas (ej. #booktok #romanceoscuro).',
-          en: 'Why: Warming up the audience without revealing too much generates anticipation.\n\nStep by step: Go to Canva. Create a vertical video or carousel using aesthetic images that represent the vibe of the book. Add an intriguing quote from your novel. Use specific lowercase hashtags.'
+          en: 'Why: Warming up the audience without revealing too much generates anticipation.\n\nStep by step: Go to Canva. Create a vertical video (Reel/TikTok) or a carousel using aesthetic images that represent the vibe of the book (e.g., rain, a dagger, a cup of coffee). Add an intriguing quote from your novel. Use specific lowercase hashtags (e.g., #booktok #darkromance).'
         },
         upsell: {
           id: 'alchemy-studio',
@@ -122,7 +122,7 @@ export const roadmapContent = [
         },
         description: {
           es: 'Por qué: Necesitas un espacio profesional donde los lectores vean tu biografía.\n\nPaso a paso: Entra a author.amazon.com y a Goodreads. Si eres autor nuevo, crea tu cuenta y sube una buena foto tuya y tu biografía. (Nota: Vincularás tu libro específico en unas semanas, cuando actives la preventa).',
-          en: 'Why: You need a professional space where readers can see your biography.\n\nStep by step: Go to author.amazon.com and Goodreads. Create your account and upload a good photo and biography. (Note: You\'ll link your specific book in a few weeks, when you activate the preorder).'
+          en: 'Why: You need a professional space where readers can see your biography.\n\nStep by step: Go to author.amazon.com and Goodreads. If you\'re a new author, create your account and upload a good photo and biography. (Note: You\'ll link your specific book in a few weeks, when you activate the preorder).'
         }
       }
     ]
@@ -145,7 +145,7 @@ export const roadmapContent = [
         },
         description: {
           es: 'Por qué: Hay que establecer las reglas del juego de forma profesional.\n\nPaso a paso: Cierra el formulario. Elige a los candidatos que parezcan más comprometidos. Envíales un correo de bienvenida diciendo: "¡Felicidades! Estás en el equipo. Te enviaré el libro la próxima semana. Tu única misión será dejar una reseña en Amazon el [Fecha de lanzamiento]".',
-          en: 'Why: You need to establish the rules of the game professionally.\n\nStep by step: Close the form. Choose the most committed candidates. Send them a welcome email: "Congratulations! You\'re on the team. I\'ll send you the book next week. Your only mission will be to leave a review on Amazon on [Launch Date]".'
+          en: 'Why: You need to establish the rules of the game professionally.\n\nStep by step: Close the form. Choose the candidates who seem most committed. Send them a welcome email saying: "Congratulations! You\'re on the team. I\'ll send you the book next week. Your only mission will be to leave a review on Amazon on [Launch Date]".'
         },
         upsell: {
           id: 'pr-templates',
@@ -180,7 +180,7 @@ export const roadmapContent = [
         },
         description: {
           es: 'Por qué: Los detalles físicos enamoran a los lectores y sirven de promoción.\n\nPaso a paso: Diseña en Canva marcapáginas, postales de los personajes o pegatinas (stickers) relacionadas con tu libro. Manda a imprimirlos en una imprenta local o servicios online con suficiente tiempo de antelación.',
-          en: 'Why: Physical details make readers fall in love and serve as promotion.\n\nStep by step: Design bookmarks, character postcards, or stickers in Canva. Send them to a local printer or online services with enough lead time.'
+          en: 'Why: Physical details make readers fall in love and serve as promotion.\n\nStep by step: Design bookmarks, character postcards, or stickers related to your book in Canva. Send them to a local printer or online services with enough lead time.'
         }
       },
       {
@@ -212,7 +212,7 @@ export const roadmapContent = [
         title: { es: '[Todos] ¡Cover Reveal Day!', en: '[Everyone] Cover Reveal Day!' },
         description: {
           es: 'Por qué: Es el primer gran hito de marketing.\n\nPaso a paso: Sube un post o Reel revelando la portada completa. Pídele a tus amigos, a tu equipo ARC y a otros autores que lo compartan en sus historias exactamente el mismo día para inundar las redes.',
-          en: 'Why: It\'s the first big marketing milestone.\n\nStep by step: Post a Reel revealing the full cover. Ask your friends, ARC team, and other authors to share it on the exact same day to flood social media.'
+          en: 'Why: It\'s the first big marketing milestone.\n\nStep by step: Post a Reel revealing the full cover. Ask your friends, ARC team, and other authors to share it on their stories on the exact same day to flood social media.'
         }
       },
       {
@@ -221,7 +221,7 @@ export const roadmapContent = [
         title: { es: '[Todos] Activar la preventa (Pre-order)', en: '[Everyone] Activate preorder' },
         description: {
           es: 'Por qué: Empiezas a acumular ventas y le dices a Amazon que tu libro existe.\n\nPaso a paso: Entra a KDP, configura la fecha de lanzamiento y activa la preventa (Amazon te permite hacerlo hasta con un año de anticipación). Copia el enlace de compra y ponlo en tu biografía de redes sociales. ¡Ahora sí puedes enlazar el libro a tu Amazon Author Central!',
-          en: 'Why: You start accumulating sales and tell Amazon your book exists.\n\nStep by step: Go to KDP, set the launch date and activate the preorder. Copy the purchase link and put it in your social media bio. Now you can link the book to your Amazon Author Central!'
+          en: 'Why: You start accumulating sales and tell Amazon your book exists.\n\nStep by step: Go to KDP, set the launch date and activate the preorder (Amazon allows you to do this up to a year in advance). Copy the purchase link and put it in your social media bio. Now you can link the book to your Amazon Author Central!'
         }
       },
       {
@@ -229,8 +229,8 @@ export const roadmapContent = [
         formats: ['Digital', 'Físico', 'Ambos'],
         title: { es: '[Todos] Enviar manuscrito al Equipo ARC', en: '[Everyone] Send manuscript to ARC Team' },
         description: {
-          es: 'Por qué: Tienen que tener tiempo suficiente para leerlo (de 4 a 6 semanas).\n\nPaso a paso: No envíes archivos sueltos por correo (se pueden piratear fácilmente). Utiliza plataformas seguras como BookFunnel o StoryOrigin. Generan un enlace seguro que permite a tus lectores enviar el libro directamente a su Kindle. Pega este enlace en un correo masivo y recuérdales sutilmente la fecha de la reseña.',
-          en: 'Why: They need enough time to read it (4 to 6 weeks).\n\nStep by step: Don\'t send loose files by email (they can be easily pirated). Use secure platforms like BookFunnel or StoryOrigin. Paste the link in a mass email and subtly remind them of the review date.'
+          es: 'Por qué: Tienen que tener tiempo suficiente para leerlo (de 4 a 6 semanas).\n\nPaso a paso: No envíes archivos sueltos por correo (se pueden piratear fácilmente). Utiliza plataformas seguras especializadas en envíos de copias avanzadas como BookFunnel o StoryOrigin. Estas herramientas generan un enlace seguro que permite a tus lectores enviar el libro directamente a su aplicación de Kindle o e-reader con un solo clic. Pega este enlace en un correo masivo y recuérdales sutilmente la fecha en la que deben publicar la reseña.',
+          en: 'Why: They need enough time to read it (4 to 6 weeks).\n\nStep by step: Don\'t send loose files by email (they can be easily pirated). Use specialized secure platforms like BookFunnel or StoryOrigin. These tools generate a secure link that allows your readers to send the book directly to their Kindle or e-reader app with a single click. Paste this link in a mass email and subtly remind them of the review date.'
         }
       },
       {
@@ -239,7 +239,7 @@ export const roadmapContent = [
         title: { es: '[Solo Físico] Armar las "PR Boxes"', en: '[Physical Only] Assemble PR Boxes' },
         description: {
           es: 'Por qué: Las cajas de relaciones públicas generan videos de "Unboxing" muy virales.\n\nPaso a paso: Compra cajas bonitas. Mete una copia física de prueba de tu libro, el Swag que imprimiste (marcapáginas), y algún detalle temático (ej. una bolsita de té si tu personaje ama el té, o un labial rojo). Cierra todo con cuidado.',
-          en: 'Why: PR boxes generate very viral Unboxing videos.\n\nStep by step: Buy nice boxes. Put a physical proof copy, your swag (bookmarks), and a themed detail. Close everything carefully.'
+          en: 'Why: PR boxes generate very viral "Unboxing" videos.\n\nStep by step: Buy nice boxes. Put a physical proof copy of your book, the swag you printed (bookmarks), and a themed detail (e.g., a tea bag if your character loves tea, or a red lipstick). Close everything carefully.'
         }
       }
     ]
@@ -259,7 +259,7 @@ export const roadmapContent = [
         title: { es: '[Solo Físico] ¡ALERTA! Pedir Copias de Autor (Author Copies)', en: '[Physical Only] ALERT! Order Author Copies' },
         description: {
           es: 'Por qué: Amazon tarda muchísimo en imprimir y enviar los libros a precio de autor. Si no lo haces hoy, no tendrás libros para vender el día de tu evento.\n\nPaso a paso: En tu panel de KDP, junto a tu libro, selecciona "Pedir copias para el autor". Calcula cuántas vas a vender en tu evento presencial y haz el pedido a tu dirección.',
-          en: 'Why: Amazon takes a very long time to print and ship books at author price. If you don\'t do this today, you won\'t have books to sell on event day.\n\nStep by step: In your KDP panel, select "Order author copies". Calculate how many you\'ll sell at your in-person event and place the order to your address.'
+          en: 'Why: Amazon takes a very long time to print and ship books at author price. If you don\'t do this today, you won\'t have books to sell on event day.\n\nStep by step: In your KDP panel, next to your book, select "Order author copies". Calculate how many you\'ll sell at your in-person event and place the order to your address.'
         }
       },
       {
@@ -268,7 +268,7 @@ export const roadmapContent = [
         title: { es: '[Todos] Publicar Fichas de Personajes', en: '[Everyone] Publish Character Profiles' },
         description: {
           es: 'Por qué: A los lectores les encanta saber a quién van a leer (especialmente al interés amoroso).\n\nPaso a paso: Usa plantillas (como las de Bookish Alchemy) para subir el nombre, el rol, una frase icónica y sus "banderas rojas" o virtudes.',
-          en: 'Why: Readers love knowing who they\'re going to read (especially the love interest).\n\nStep by step: Use templates to upload their name, role, an iconic quote, and their red flags or virtues.'
+          en: 'Why: Readers love knowing who they\'re going to read (especially the love interest).\n\nStep by step: Use templates (like Bookish Alchemy\'s) to upload their name, role, an iconic quote, and their "red flags" or virtues.'
         }
       },
       {
@@ -277,7 +277,7 @@ export const roadmapContent = [
         title: { es: '[Todos] Subir arte hiperrealista de los personajes', en: '[Everyone] Upload hyper-realistic character art' },
         description: {
           es: 'Por qué: Ponerles un rostro espectacular detiene el scroll en Instagram y TikTok.\n\nPaso a paso: Publica ilustraciones de alta calidad de tus protagonistas. (Si no tienes arte propio, en Bookish Alchemy AI Studio creamos retratos hiperrealistas de tus personajes para que domines en redes).',
-          en: 'Why: Putting a spectacular face on them stops the scroll on Instagram and TikTok.\n\nStep by step: Post high-quality illustrations of your protagonists. (At Bookish Alchemy AI Studio we create hyper-realistic portraits so you dominate on social media).'
+          en: 'Why: Putting a spectacular face on them stops the scroll on Instagram and TikTok.\n\nStep by step: Post high-quality illustrations of your protagonists. (If you don\'t have your own art, at Bookish Alchemy AI Studio we create hyper-realistic portraits of your characters so you dominate on social media).'
         }
       },
       {
@@ -306,7 +306,7 @@ export const roadmapContent = [
         title: { es: '[Todos] Crear y compartir la Playlist oficial', en: '[Everyone] Create and share the official Playlist' },
         description: {
           es: 'Por qué: La música conecta emocionalmente con los lectores y da pistas de la trama.\n\nPaso a paso: Abre Spotify, crea una lista pública con canciones que escuchaste al escribir o que encajen con la vibra. Hazle una portada bonita y comparte el enlace en tus redes y en tu boletín de correo.',
-          en: 'Why: Music emotionally connects with readers and gives plot hints.\n\nStep by step: Open Spotify, create a public playlist with songs you listened to while writing. Make a nice cover for it and share the link on your social media and newsletter.'
+          en: 'Why: Music emotionally connects with readers and gives plot hints.\n\nStep by step: Open Spotify, create a public playlist with songs you listened to while writing or that fit the vibe. Make a nice cover for it and share the link on your social media and newsletter.'
         }
       },
       {
@@ -315,7 +315,7 @@ export const roadmapContent = [
         title: { es: '[Todos] Correo de seguimiento al Equipo ARC', en: '[Everyone] Follow-up email to ARC Team' },
         description: {
           es: 'Por qué: Hay que mantenerlos motivados sin presionarlos.\n\nPaso a paso: Envía un correo breve: "¡Hola equipo! Pasaba a saludar. Espero que estén disfrutando la lectura. Si ya tienen frases favoritas, no duden en compartirlas en sus redes y etiquetarme. Faltan 5 semanas para el lanzamiento".',
-          en: 'Why: You need to keep them motivated without pressuring them.\n\nStep by step: Send a brief email: "Hi team! Just checking in. Hope you\'re enjoying the read. If you have favorite quotes, share them and tag me. 5 weeks until launch!".'
+          en: 'Why: You need to keep them motivated without pressuring them.\n\nStep by step: Send a brief email: "Hi team! Just checking in. Hope you\'re enjoying the read. If you already have favorite quotes, don\'t hesitate to share them on your social media and tag me. 5 weeks until launch!".'
         }
       },
       {
@@ -324,7 +324,7 @@ export const roadmapContent = [
         title: { es: '[Todos] Anunciar un incentivo de preventa', en: '[Everyone] Announce a preorder incentive' },
         description: {
           es: 'Por qué: Necesitas empujar a los indecisos a comprar hoy y no esperar al lanzamiento.\n\nPaso a paso: Anuncia en redes: "Si reservas el libro hoy y me envías una captura de pantalla, te enviaré [un capítulo extra / una precuela digital / un arte exclusivo] por correo inmediatamente".',
-          en: 'Why: You need to push the undecided to buy today and not wait for launch.\n\nStep by step: Announce on social media: "If you preorder today and send me a screenshot, I\'ll send you [an extra chapter / digital prequel / exclusive art] immediately".'
+          en: 'Why: You need to push the undecided to buy today and not wait for launch.\n\nStep by step: Announce on social media: "If you preorder the book today and send me a screenshot, I\'ll send you [an extra chapter / a digital prequel / exclusive art] by email immediately".'
         }
       }
     ]
@@ -344,7 +344,7 @@ export const roadmapContent = [
         title: { es: '[Todos] Lanzar el Book Trailer', en: '[Everyone] Launch the Book Trailer' },
         description: {
           es: 'Por qué: Un buen video dramático se puede volver viral fácilmente.\n\nPaso a paso: Sube un video en formato vertical (TikTok/Reels) editado con cortes rápidos, música de alta tensión y frases potentes del libro. Llama a la acción al final: "Resérvalo ya en el link de mi bio".',
-          en: 'Why: A good dramatic video can easily go viral.\n\nStep by step: Upload a vertical video edited with quick cuts, high-tension music, and powerful quotes. Call to action at the end: "Reserve it now in the link in my bio".'
+          en: 'Why: A good dramatic video can easily go viral.\n\nStep by step: Upload a vertical video (TikTok/Reels) edited with quick cuts, high-tension music, and powerful quotes from the book. Call to action at the end: "Reserve it now in the link in my bio".'
         }
       },
       {
@@ -362,7 +362,7 @@ export const roadmapContent = [
         title: { es: '[Solo Físico] Publicar el afiche oficial de invitación al evento', en: '[Physical Only] Publish official event invitation poster' },
         description: {
           es: 'Por qué: Tu comunidad local necesita tiempo para agendar la fecha.\n\nPaso a paso: Diseña una invitación digital clara con Fecha, Hora, Lugar, y qué esperar (lectura, firma de libros, brindis). Publícala en tus redes y envíala por WhatsApp a tus allegados.',
-          en: 'Why: Your local community needs time to schedule the date.\n\nStep by step: Design a clear digital invitation with Date, Time, Location, and what to expect. Post it on your social media and send it via WhatsApp to your close ones.'
+          en: 'Why: Your local community needs time to schedule the date.\n\nStep by step: Design a clear digital invitation with Date, Time, Location, and what to expect (reading, book signing, toast). Post it on your social media and send it via WhatsApp to your close ones.'
         }
       }
     ]
@@ -382,7 +382,7 @@ export const roadmapContent = [
         title: { es: '[Todos] Publicar los primeros "Blurbs"', en: '[Everyone] Publish the first Blurbs' },
         description: {
           es: 'Por qué: La prueba social vende más que cualquier anuncio.\n\nPaso a paso: Pídele permiso a tus lectores ARC para usar sus reacciones. Diseña imágenes en Canva que destaquen frases como: "No pude soltarlo en toda la noche - @LectorActivo". Súbelas a todas tus plataformas.',
-          en: 'Why: Social proof sells more than any ad.\n\nStep by step: Ask your ARC readers for permission to use their reactions. Design images in Canva featuring powerful quotes. Upload them to all your platforms.'
+          en: 'Why: Social proof sells more than any ad.\n\nStep by step: Ask your ARC readers for permission to use their reactions. Design images in Canva featuring quotes like: "I couldn\'t put it down all night - @ActiveReader". Upload them to all your platforms.'
         }
       },
       {
@@ -391,7 +391,7 @@ export const roadmapContent = [
         title: { es: '[Todos] Francotirador de Categorías KDP', en: '[Everyone] KDP Category Sniper' },
         description: {
           es: 'Por qué: Competir en "Romance General" es imposible. Competir en "Fantasía Urbana Oscura para Jóvenes" te puede dar la etiqueta de Bestseller.\n\nPaso a paso: Amazon KDP te permite seleccionar exactamente 3 categorías. Investiga en la tienda cuáles nichos específicos encajan con tu libro y tienen menor competencia. Configúralas en tu panel de detalles del libro.',
-          en: 'Why: Competing in "General Romance" is impossible. Competing in "Dark Urban Fantasy for Young Adults" can give you the Bestseller tag.\n\nStep by step: Amazon KDP lets you select exactly 3 categories. Research which specific niches fit your book and have less competition. Set them up in your book details panel.'
+          en: 'Why: Competing in "General Romance" is impossible. Competing in "Dark Urban Fantasy for Young Adults" can give you the Bestseller tag.\n\nStep by step: Amazon KDP lets you select exactly 3 categories. Research which specific niches fit your book and have less competition in the store. Set them up in your book details panel.'
         }
       },
       {
@@ -400,7 +400,7 @@ export const roadmapContent = [
         title: { es: '[Todos] Agendar colaboraciones', en: '[Everyone] Schedule collaborations' },
         description: {
           es: 'Por qué: Hay que robar un poco de audiencia de otros lugares afines.\n\nPaso a paso: Cierra entrevistas para esa semana o la próxima en podcasts literarios, haz directos (Lives) en Instagram con otros autores, o escribe artículos invitados en blogs.',
-          en: 'Why: You need to steal a bit of audience from similar places.\n\nStep by step: Close interviews on literary podcasts, do Instagram Lives with other authors, or write guest articles on blogs.'
+          en: 'Why: You need to steal a bit of audience from similar places.\n\nStep by step: Close interviews for this week or next on literary podcasts, do Instagram Lives with other authors, or write guest articles on blogs.'
         }
       }
     ]
@@ -417,10 +417,10 @@ export const roadmapContent = [
       {
         id: 'w2-t1',
         formats: ['Digital', 'Físico', 'Ambos'],
-        title: { es: '[Todos] Subir el archivo final a KDP y añadir el "Contenido A+"', en: '[Everyone] Upload final file to KDP and add A+ Content' },
+        title: { es: '[Todos] Subir el archivo final a KDP y añadir el "Contenido A+"', en: '[Everyone] Upload final file to KDP and add "A+ Content"' },
         description: {
-          es: 'Por qué: El archivo debe estar perfecto y el contenido A+ tarda días en ser aprobado por Amazon.\n\nPaso a paso: Sube la versión definitiva y corregida de tu manuscrito. Luego, ve a "Marketing" en KDP, selecciona "Contenido A+" y sube los banners que creaste para que tu página de ventas luzca profesional.',
-          en: 'Why: The file must be perfect and A+ content takes days to be approved by Amazon.\n\nStep by step: Upload the final, corrected version of your manuscript. Then, go to "Marketing" in KDP, select "A+ Content" and upload the banners you created so your sales page looks professional.'
+          es: 'Por qué: El archivo debe estar perfecto y el contenido A+ tarda días en ser aprobado por Amazon.\n\nPaso a paso: Sube la versión definitiva y corregida de tu manuscrito. Luego, ve a "Marketing" en KDP, selecciona "Contenido A+" y sube los banners que creaste (El trío de detalles, el póster de personajes, etc.) para que tu página de ventas luzca profesional.',
+          en: 'Why: The file must be perfect and A+ content takes days to be approved by Amazon.\n\nStep by step: Upload the final, corrected version of your manuscript. Then, go to "Marketing" in KDP, select "A+ Content" and upload the banners you created (the detail trio, character poster, etc.) so your sales page looks professional.'
         },
         upsell: {
           id: 'aplus-templates',
@@ -428,7 +428,7 @@ export const roadmapContent = [
           title: { es: 'Plantillas A+ Imán de Ventas', en: 'A+ Sales Magnet Templates' },
           text: { es: 'Plantillas de Canva listas para usar. Crea tu Contenido A+ en minutos y mejora la conversión de tu página de Amazon.', en: 'Ready-to-use Canva templates. Create your A+ Content in minutes.' },
           price: 'Incluido en Premium',
-          link: 'https://canva.com'
+          link: 'https://drive.google.com/drive/folders/1nBA34T9U0McOGDnJfWyS-jgYUZgg53Aq?usp=drive_link'
         }
       },
       {
@@ -437,7 +437,7 @@ export const roadmapContent = [
         title: { es: '[Todos] Programar contenido en redes sociales', en: '[Everyone] Schedule social media content' },
         description: {
           es: 'Por qué: La semana de lanzamiento estarás demasiado abrumado respondiendo mensajes como para pensar en qué publicar.\n\nPaso a paso: Usa herramientas de programación (o los borradores de Instagram/TikTok) para dejar listos los videos y posts de los próximos 7 días.',
-          en: 'Why: Launch week you\'ll be too overwhelmed answering messages to think about what to post.\n\nStep by step: Use scheduling tools or Instagram/TikTok drafts to have the videos and posts for the next 7 days ready to go.'
+          en: 'Why: Launch week you\'ll be too overwhelmed answering messages to think about what to post.\n\nStep by step: Use scheduling tools (or Instagram/TikTok drafts) to have the videos and posts for the next 7 days ready to go.'
         }
       },
       {
@@ -446,7 +446,7 @@ export const roadmapContent = [
         title: { es: '[Solo Físico] Preparar kit de firmas', en: '[Physical Only] Prepare signing kit' },
         description: {
           es: 'Por qué: Para el evento presencial no te puede faltar nada operativo.\n\nPaso a paso: Empaca en un bolso: bolígrafos permanentes (Sharpies que no manchen), post-its (para preguntar el nombre a quien le firmas), una terminal de pago (si cobras con tarjeta), cambio en efectivo y botellas de agua.',
-          en: 'Why: For the in-person event you can\'t be missing any operational items.\n\nStep by step: Pack in a bag: permanent markers, post-its, a payment terminal, cash change, and water bottles.'
+          en: 'Why: For the in-person event you can\'t be missing any operational items.\n\nStep by step: Pack in a bag: permanent markers (Sharpies that don\'t smudge), post-its (to ask the name of who you\'re signing for), a payment terminal (if you charge by card), cash change, and water bottles.'
         }
       }
     ]
@@ -465,8 +465,8 @@ export const roadmapContent = [
         formats: ['Digital', 'Físico', 'Ambos'],
         title: { es: '[Todos] ¡Release Day! Correo masivo a la lista', en: '[Everyone] Release Day! Mass email to the list' },
         description: {
-          es: 'Por qué: Es el empujón inicial más fuerte para el algoritmo de Amazon.\n\nPaso a paso: A primera hora de la mañana, envía un correo a toda tu lista celebrando que el libro ya nació. Incluye un botón enorme y claro con el enlace directo para comprar en Amazon.',
-          en: 'Why: It\'s the strongest initial push for the Amazon algorithm.\n\nStep by step: First thing in the morning, send an email to your entire list celebrating the book launch. Include a huge, clear button with the direct Amazon purchase link.'
+          es: 'Por qué: Es el empujón inicial más fuerte para el algoritmo de Amazon.\n\nPaso a paso: A primera hora de la mañana, envía un correo a toda tu lista (la que construiste desde la Semana 10) celebrando que el libro ya nació. Incluye un botón enorme y claro con el enlace directo para comprar en Amazon.',
+          en: 'Why: It\'s the strongest initial push for the Amazon algorithm.\n\nStep by step: First thing in the morning, send an email to your entire list (the one you built from Week 10) celebrating that the book is born. Include a huge, clear button with the direct Amazon purchase link.'
         }
       },
       {
@@ -493,7 +493,7 @@ export const roadmapContent = [
         title: { es: '[Solo Físico] Evento presencial de presentación', en: '[Physical Only] In-person launch event' },
         description: {
           es: 'Por qué: Celebrar con tu comunidad física.\n\nPaso a paso: ¡Disfruta tu momento! Pero antes de empezar, delégale tu celular a un amigo o familiar con una misión estricta: tomar fotos y grabar clips cortos de ti firmando libros y hablando. Ese material te servirá como contenido para redes durante meses.',
-          en: 'Why: Celebrate with your physical community.\n\nStep by step: Enjoy your moment! But before starting, delegate your phone to a friend with a strict mission: take photos and record short clips of you signing books. That material will serve as social media content for months.'
+          en: 'Why: Celebrate with your physical community.\n\nStep by step: Enjoy your moment! But before starting, delegate your phone to a friend or family member with a strict mission: take photos and record short clips of you signing books and speaking. That material will serve as social media content for months.'
         }
       }
     ]
