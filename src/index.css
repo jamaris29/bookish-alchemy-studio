@@ -77,9 +77,7 @@ a:hover { color: var(--accent-hover); }
 ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: var(--radius-full); }
 ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
 
-/* ============================
-   Layout & App
-   ============================ */
+/* Layout & App */
 .app-layout { display: flex; flex-direction: column; min-height: 100vh; }
 .main-content {
   flex: 1;
@@ -89,9 +87,7 @@ a:hover { color: var(--accent-hover); }
   width: 100%;
 }
 
-/* ============================
-   Footer
-   ============================ */
+/* Footer */
 .footer {
   background-color: var(--bg-secondary);
   border-top: 1px solid var(--border-color);
@@ -125,9 +121,7 @@ a:hover { color: var(--accent-hover); }
 }
 .social-link:hover { color: var(--accent-primary); transform: translateY(-2px); }
 
-/* ============================
-   Header
-   ============================ */
+/* Header */
 .header {
   background-color: var(--bg-secondary);
   border-bottom: 1px solid var(--border-color);
@@ -175,9 +169,7 @@ a:hover { color: var(--accent-hover); }
 .nav-link-text { display: none; }
 @media (min-width: 480px) { .nav-link-text { display: inline; } }
 
-/* ============================
-   Onboarding
-   ============================ */
+/* Onboarding */
 .onboarding-container {
   display: flex;
   justify-content: center;
@@ -210,12 +202,9 @@ a:hover { color: var(--accent-hover); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ============================
-   Roadmap & Weeks
-   ============================ */
+/* Roadmap & Weeks */
 .roadmap-container { animation: fadeIn 0.4s ease-out; }
 
-/* --- Hero Header --- */
 .roadmap-hero {
   text-align: center;
   padding: 2rem 1.5rem 2.5rem;
@@ -244,7 +233,6 @@ a:hover { color: var(--accent-hover); }
 .text-button { color: var(--text-muted); font-size: 0.85rem; text-decoration: underline; }
 .text-button:hover { color: var(--text-primary); }
 
-/* --- Global Progress --- */
 .global-progress { max-width: 420px; margin: 0 auto 1.5rem; }
 .global-progress-info {
   display: flex;
@@ -264,7 +252,6 @@ a:hover { color: var(--accent-hover); }
 }
 .roadmap-pdf-btn { display: inline-flex !important; align-items: center; gap: 8px; margin: 0 auto; }
 
-/* --- Timeline Layout --- */
 .roadmap-timeline { display: flex; flex-direction: column; gap: 0; }
 .timeline-item { display: flex; gap: 1.25rem; position: relative; }
 .timeline-track-col { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; width: 48px; }
@@ -290,7 +277,6 @@ a:hover { color: var(--accent-hover); }
 .timeline-connector { width: 3px; flex: 1; min-height: 24px; background-color: var(--border-color); border-radius: 2px; }
 .timeline-connector--done { background: linear-gradient(180deg, var(--success), var(--accent-primary)); }
 
-/* --- Week Card --- */
 .week-card {
   flex: 1;
   margin-bottom: 2rem;
@@ -315,7 +301,6 @@ a:hover { color: var(--accent-hover); }
 .week-card--locked .week-title { color: var(--text-muted); }
 .week-subtitle { color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem; line-height: 1.5; font-style: italic; }
 
-/* --- Week Progress --- */
 .week-progress { margin-top: 0.75rem; }
 .week-progress-info { display: flex; justify-content: space-between; font-size: 0.75rem; font-weight: 500; color: var(--text-muted); margin-bottom: 0.3rem; }
 .week-progress-track { height: 5px; background-color: var(--border-color); border-radius: var(--radius-full); overflow: hidden; }
@@ -329,7 +314,6 @@ a:hover { color: var(--accent-hover); }
 .tasks-list .task-accordion { border-radius: 0; border-left: none; border-right: none; border-top: none; }
 .tasks-list .task-accordion:last-child { border-bottom: none; }
 
-/* Mobile timeline */
 @media (max-width: 640px) {
   .timeline-track-col { width: 36px; }
   .timeline-node { width: 36px; height: 36px; border-width: 2px; }
@@ -340,9 +324,7 @@ a:hover { color: var(--accent-hover); }
   .roadmap-hero-title { font-size: 1.6rem; }
 }
 
-/* ============================
-   Task Accordion
-   ============================ */
+/* Task Accordion */
 .task-accordion {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
@@ -384,9 +366,7 @@ a:hover { color: var(--accent-hover); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ============================
-   Upsell Block
-   ============================ */
+/* Upsell Block */
 .task-upsell {
   margin-top: 1.5rem;
   padding: 1.5rem;
@@ -410,9 +390,7 @@ a:hover { color: var(--accent-hover); }
 }
 .btn-primary:hover { background-color: var(--accent-hover); color: #ffffff; transform: translateY(-2px); box-shadow: var(--shadow-md); }
 
-/* ============================
-   Paywall Modal
-   ============================ */
+/* Paywall Modal */
 .paywall-modal-overlay {
   position: fixed;
   inset: 0;
@@ -445,9 +423,7 @@ a:hover { color: var(--accent-hover); }
   to { opacity: 1; transform: scale(1); }
 }
 
-/* ============================
-   Access Denied
-   ============================ */
+/* Access Denied */
 .access-denied { display: flex; justify-content: center; align-items: center; min-height: 60vh; animation: fadeIn 0.5s ease-out; }
 .access-denied-card {
   text-align: center;
@@ -464,13 +440,81 @@ a:hover { color: var(--accent-hover); }
 .access-denied-card p { color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.7; }
 .access-denied-btn { width: 100%; font-size: 1.05rem; padding: 1rem 2rem; }
 
-/* ============================
-   Resources Dashboard
-   ============================ */
+/* Resources Dashboard */
 .resources-dashboard { animation: fadeIn 0.4s ease-out; }
-.resources-header { margin-bottom: 2.5rem; }
+.resources-header { margin-bottom: 2rem; }
 .resources-header h2 { font-size: 2rem; margin-bottom: 0.5rem; }
 .resources-subtitle { color: var(--text-secondary); font-size: 1.05rem; line-height: 1.6; }
+
+/* Section titles */
+.resources-section-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 1.5rem 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.resources-section-title--premium {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Free resource card */
+.resource-card--free {
+  position: relative;
+  border: 2px solid var(--accent-primary) !important;
+  background: linear-gradient(135deg, var(--accent-light), var(--bg-secondary) 70%) !important;
+}
+.free-badge {
+  position: absolute;
+  top: -1px;
+  right: 16px;
+  background: var(--accent-primary);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.65rem;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+.resource-icon--free {
+  background-color: var(--accent-primary) !important;
+  color: #fff !important;
+}
+
+/* Download button */
+.btn-download {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Paywall banner */
+.resources-paywall-banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, var(--accent-light), transparent 80%);
+  border: 1px dashed var(--accent-primary);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  color: var(--accent-primary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  flex-wrap: wrap;
+}
+.resources-paywall-banner p { flex: 1; margin: 0; color: var(--text-primary); }
+.resources-paywall-banner .btn-primary { padding: 0.5rem 1.25rem; font-size: 0.9rem; white-space: nowrap; }
+
+/* Locked premium grid */
+.resource-grid--locked { opacity: 0.6; pointer-events: none; -webkit-user-select: none; user-select: none; }
+.resource-card--locked { border-style: dashed !important; }
+
 .btn-back { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-muted); font-size: 0.9rem; font-weight: 500; margin-bottom: 1.5rem; padding: 0.5rem 0; transition: var(--transition-normal); }
 .btn-back:hover { color: var(--accent-primary); }
 .resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
@@ -494,9 +538,7 @@ a:hover { color: var(--accent-hover); }
 .resource-description { color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; flex: 1; }
 .resource-btn { width: 100%; margin-top: 0.5rem; }
 
-/* ============================
-   Email Scripts
-   ============================ */
+/* Email Scripts */
 .email-scripts-container { animation: fadeIn 0.4s ease-out; }
 .scripts-header { margin-bottom: 2.5rem; }
 .scripts-header h2 { font-size: 2rem; margin-bottom: 0.5rem; }
@@ -533,9 +575,6 @@ a:hover { color: var(--accent-hover); }
 .copy-btn:hover { background-color: var(--accent-primary); color: #ffffff; }
 .copy-btn.copied { background-color: var(--success); color: #ffffff; }
 
-/* ============================
-   Responsive adjustments
-   ============================ */
 @media (max-width: 640px) {
   .resource-grid { grid-template-columns: 1fr; }
   .access-denied-card { padding: 2rem 1.5rem; }
