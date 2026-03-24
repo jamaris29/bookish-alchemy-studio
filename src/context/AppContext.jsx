@@ -56,7 +56,7 @@ export const AppProvider = ({ children }) => {
       window.history.replaceState({}, '', window.location.pathname);
       // Show confirmation
       setTimeout(() => {
-        alert('\uD83C\uDF89 \u00a1Pago confirmado! Todo el contenido ha sido desbloqueado. \u00a1Gracias por unirte a Premium!');
+        alert('🎉 ¡Pago confirmado! Todo el contenido ha sido desbloqueado. ¡Gracias por unirte a Premium!');
       }, 500);
     }
   }, []);

@@ -161,20 +161,23 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('bb_emails', JSON.stringify(emails));
     }
 
-    // Send to Hostinger Reach via our secure PHP proxy (token never exposed client-side)
+    // Send directly to MailerLite's CORS-friendly form endpoint
     try {
-      const response = await fetch('subscribe.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
-      });
+      const formData = new FormData();
+      formData.append('fields[email]', email);
+      formData.append('ml-submit', '1');
+      formData.append('anticsrf', 'true');
+
+      const response = await fetch(
+        'https://assets.mailerlite.com/jsonp/2207106/forms/182416487836812530/subscribe',
+        { method: 'POST', body: formData }
+      );
 
       const data = await response.json().catch(() => ({}));
-      console.log('Hostinger Reach response:', data);
+      console.log('MailerLite response:', data);
       return true;
     } catch (err) {
-      console.warn('Error submitting to Hostinger Reach:', err.message);
-      // Still return true so the user sees success (email saved locally)
+      console.warn('Error:', err.message);
       return true;
     }
   }

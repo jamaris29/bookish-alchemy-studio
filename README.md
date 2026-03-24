@@ -1,54 +1,16 @@
-# The Bestseller Blueprint 📚✨
+# React + Vite
 
-Landing page oficial de **The Bestseller Blueprint** — by Bookish Alchemy AI Studio.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Una web app gratuita que guía a escritores paso a paso para transformar su manuscrito en un libro publicado.
+Currently, two official plugins are available:
 
-## 🌐 Demo en vivo
-Desplegado en Vercel: [lanzamiento-editorial.vercel.app](https://lanzamiento-editorial.vercel.app)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## ✨ Características de la Landing Page
-- **Hero animado** con partículas flotantes y formulario de captura de emails
-- **Pain Points** con estadísticas con animación count-up
-- **Sección solución** con roadmap de 3 pasos
-- **Nuestra historia** — las fundadoras de Bookish Alchemy AI
-- **Features** — 6 funcionalidades clave de la web app
-- **Testimonios** de escritores reales
-- **CTA final** con formulario de acceso gratuito
-- **Popup de exit intent** — aparece a los 8s o al mover el cursor fuera
-- **Social proof toasts** — notificaciones de actividad en tiempo real
-- **Integración MailerLite** para captura de emails
-- **Meta Pixel** para tracking y retargeting con Meta Ads (ID: 2806512659700975)
-- Diseño **dark mode** premium con glassmorphism
+## React Compiler
 
-## 🛠️ Tech Stack
-- HTML5 + Vanilla CSS + Vanilla JavaScript
-- Google Fonts (Playfair Display + Inter)
-- MailerLite API para email marketing
-- Meta Pixel para tracking y ads
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 🚀 Desarrollo local
-```bash
-npm install
-npm run dev
-```
+## Expanding the ESLint configuration
 
-## 📁 Estructura de archivos
-```
-├── index.html       # Landing page principal
-├── styles.css       # Estilos completos (dark mode, animaciones)
-├── script.js        # Lógica JS (formularios, popups, animaciones)
-├── logo.png         # Logo Bookish Alchemy AI
-├── hero.png         # Imagen hero de la landing
-├── vercel.json      # Config de despliegue
-├── subscribe.php    # Backend para suscripciones (PHP)
-└── src/             # App React (web app interna)
-```
-
-## 📊 Marketing
-- Estrategia de lanzamiento con Meta Ads + contenido orgánico
-- Tracking de conversiones con Meta Pixel
-- Captación de leads vía MailerLite
-
----
-*Creado con ❤️ por Bookish Alchemy AI Studio — 2026*
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
