@@ -3,6 +3,13 @@ import { Moon, Sun, Globe, BookOpen } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAppContext } from '../context/AppContext';
 
+// Logo inline como SVG para evitar dependencia de archivos externos
+const LogoIcon = () => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style={{borderRadius:'8px',background:'linear-gradient(135deg,#0d9488,#134e4a)'}}>
+    <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle" fontSize="22" fill="#ccfbf1">📖</text>
+  </svg>
+);
+
 const Header = () => {
   const { theme, toggleTheme, lang, setLang, isPremium } = useAppContext();
   const navigate = useNavigate();
@@ -16,10 +23,10 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <div className="brand-group">
-          <img src="/logo.png" alt="Bookish Alchemy AI Studio" className="brand-logo" />
+          <LogoIcon />
           <div className="logo-text">
             <h1 className="logo">
-              {lang === 'es' ? 'The Bestseller Blueprint' : 'The Bestseller Blueprint'}
+              The Bestseller Blueprint
             </h1>
             <span className="logo-subtitle">by Bookish Alchemy AI</span>
           </div>
