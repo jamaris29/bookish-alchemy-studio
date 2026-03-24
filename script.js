@@ -103,8 +103,12 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const emailInput = form.querySelector('input[type="email"]');
-      const submitBtn = form.querySelector('button[type="submit"]');
-      const email = emailInput.value.trim();
+      const nameInput    = form.querySelector('input[name="name"]');
+      const surnameInput = form.querySelector('input[name="surname"]');
+      const submitBtn    = form.querySelector('button[type="submit"]');
+      const email   = emailInput ? emailInput.value.trim() : '';
+      const name    = nameInput    ? nameInput.value.trim()    : '';
+      const surname = surnameInput ? surnameInput.value.trim() : '';
 
       if (!isValidEmail(email)) {
         shakeElement(emailInput);
@@ -117,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.style.opacity = '0.7';
       }
 
-      const success = await saveEmail(email);
+      const success = await saveEmail(email, name, surname);
 
       // Re-enable button
       if (submitBtn) {
@@ -126,7 +130,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (success) {
-        emailInput.value = '';
+        if (emailInput)   emailInput.value   = '';
+        if (nameInput)    nameInput.value    = '';
+        if (surnameInput) surnameInput.value = '';
 
         // Close popup if open
         const popup = document.getElementById('emailPopup');
@@ -153,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 500);
   }
 
-  async function saveEmail(email) {
+  async function saveEmail(email, name = '', surname = '') {
     // Save locally as backup
     const emails = JSON.parse(localStorage.getItem('bb_emails') || '[]');
     if (!emails.includes(email)) {
@@ -161,24 +167,20 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('bb_emails', JSON.stringify(emails));
     }
 
-    // Send directly to MailerLite's CORS-friendly form endpoint
+    // Send to Hostinger Reach via server-side proxy
     try {
-      const formData = new FormData();
-      formData.append('fields[email]', email);
-      formData.append('ml-submit', '1');
-      formData.append('anticsrf', 'true');
-
-      const response = await fetch(
-        'https://assets.mailerlite.com/jsonp/2207106/forms/182416487836812530/subscribe',
-        { method: 'POST', body: formData }
-      );
+      const response = await fetch('subscribe.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, name, surname }),
+      });
 
       const data = await response.json().catch(() => ({}));
-      console.log('MailerLite response:', data);
+      console.log('Hostinger Reach response:', data);
       return true;
     } catch (err) {
-      console.warn('Error:', err.message);
-      return true;
+      console.warn('Error sending to Hostinger Reach:', err.message);
+      return true; // Graceful: still show success to user
     }
   }
 
