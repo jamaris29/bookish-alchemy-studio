@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==================== EMAIL FORMS ====================
-  const forms = ['heroForm', 'ctaForm', 'popupForm'];
+  const forms = ['heroForm', 'popupForm'];
 
   forms.forEach(formId => {
     const form = document.getElementById(formId);
@@ -103,44 +103,35 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const emailInput = form.querySelector('input[type="email"]');
-      const nameInput    = form.querySelector('input[name="name"]');
-      const surnameInput = form.querySelector('input[name="surname"]');
-      const submitBtn    = form.querySelector('button[type="submit"]');
-      const email   = emailInput ? emailInput.value.trim() : '';
-      const name    = nameInput    ? nameInput.value.trim()    : '';
-      const surname = surnameInput ? surnameInput.value.trim() : '';
+      const submitBtn  = form.querySelector('button[type="submit"]');
+      const email = emailInput ? emailInput.value.trim() : '';
 
       if (!isValidEmail(email)) {
         shakeElement(emailInput);
         return;
       }
 
-      // Disable button during submission
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.style.opacity = '0.7';
       }
 
-      const success = await saveEmail(email, name, surname);
+      const success = await saveEmail(email);
 
-      // Re-enable button
       if (submitBtn) {
         submitBtn.disabled = false;
         submitBtn.style.opacity = '';
       }
 
       if (success) {
-        if (emailInput)   emailInput.value   = '';
-        if (nameInput)    nameInput.value    = '';
-        if (surnameInput) surnameInput.value = '';
+        if (emailInput) emailInput.value = '';
 
-        // Close popup if open
+        // Cerrar popup si está abierto
         const popup = document.getElementById('emailPopup');
         if (popup && popup.classList.contains('active')) {
           popup.classList.remove('active');
         }
 
-        // Show success
         showSuccess();
       }
     });
@@ -159,28 +150,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 500);
   }
 
-  async function saveEmail(email, name = '', surname = '') {
-    // Save locally as backup
+  async function saveEmail(email) {
+    // Guardar localmente como respaldo
     const emails = JSON.parse(localStorage.getItem('bb_emails') || '[]');
     if (!emails.includes(email)) {
       emails.push(email);
       localStorage.setItem('bb_emails', JSON.stringify(emails));
     }
 
-    // Send to Hostinger Reach via server-side proxy
+    // Enviar a MailerLite via FormData (mismo endpoint que el formulario CTA)
     try {
-      const response = await fetch('subscribe.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, name, surname }),
-      });
+      const formData = new FormData();
+      formData.append('fields[email]', email);
+      formData.append('ml-submit', '1');
+      formData.append('anticsrf', 'true');
+
+      const response = await fetch(
+        'https://assets.mailerlite.com/jsonp/2207106/forms/182416487836812530/subscribe',
+        { method: 'POST', body: formData }
+      );
 
       const data = await response.json().catch(() => ({}));
-      console.log('Hostinger Reach response:', data);
+      console.log('MailerLite response:', data);
       return true;
     } catch (err) {
-      console.warn('Error sending to Hostinger Reach:', err.message);
-      return true; // Graceful: still show success to user
+      console.warn('Error al enviar a MailerLite:', err.message);
+      return true; // UX graceful: mostrar éxito igual
     }
   }
 
