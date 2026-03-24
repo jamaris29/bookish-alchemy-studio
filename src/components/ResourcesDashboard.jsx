@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Sparkles, FileDown, ArrowLeft, Download, Star } from 'lucide-react';
+import { Mail, Sparkles, FileDown, ArrowLeft, Download, Star, BarChart2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useAppContext } from '../context/AppContext';
 import EmailScripts from './EmailScripts';
@@ -17,10 +17,10 @@ const ResourcesDashboard = () => {
     {
       id: 'aplus',
       icon: <Download size={32} />,
-      title: { es: 'Plantillas Amazon A+ Imán de Ventas', en: 'Amazon A+ Sales Magnet Templates' },
+      title: { es: 'Plantillas Amazon A+ Im\u00e1n de Ventas', en: 'Amazon A+ Sales Magnet Templates' },
       subtitle: { es: 'Descarga gratuita', en: 'Free download' },
       description: {
-        es: 'Plantillas de diseño listas para usar en tu página de Amazon. Crea contenido A+ que convierta visitantes en compradores en minutos.',
+        es: 'Plantillas de dise\u00f1o listas para usar en tu p\u00e1gina de Amazon. Crea contenido A+ que convierta visitantes en compradores en minutos.',
         en: 'Ready-to-use design templates for your Amazon page. Create A+ content that converts visitors into buyers in minutes.'
       },
       btnText: { es: 'Descargar Plantillas', en: 'Download Templates' },
@@ -30,6 +30,18 @@ const ResourcesDashboard = () => {
   ];
 
   const premiumResources = [
+    {
+      id: 'success-center',
+      icon: <BarChart2 size={32} />,
+      title: { es: 'Centro de Control de \u00c9xito', en: 'Success Control Center' },
+      subtitle: { es: 'Calculadora de lanzamiento', en: 'Launch Calculator' },
+      description: {
+        es: 'Calcula tus ganancias exactas, fija metas de ventas y rese\u00f1as, y toma el control total de tu lanzamiento con n\u00fameros reales.',
+        en: 'Calculate your exact earnings, set sales and review goals, and take full control of your launch with real numbers.'
+      },
+      btnText: { es: 'Abrir Centro de Control \ud83d\ude80', en: 'Open Control Center \ud83d\ude80' },
+      action: () => window.open('https://centro-de-control-de-xito-888949783352.us-west1.run.app/', '_blank')
+    },
     {
       id: 'emails',
       icon: <Mail size={32} />,
@@ -48,7 +60,7 @@ const ResourcesDashboard = () => {
       title: { es: 'Prompter Editorial', en: 'Editorial Prompter' },
       subtitle: { es: 'IA Gemini personalizada', en: 'Custom Gemini AI' },
       description: {
-        es: 'Un bot de IA entrenado para generar tu psicografía de lector, tropos principales y estrategia de contenido automáticamente.',
+        es: 'Un bot de IA entrenado para generar tu psicograf\u00eda de lector, tropos principales y estrategia de contenido autom\u00e1ticamente.',
         en: 'An AI bot trained to generate your reader psychographics, main tropes, and content strategy automatically.'
       },
       btnText: { es: 'Abrir Prompter IA', en: 'Open AI Prompter' },
@@ -60,7 +72,7 @@ const ResourcesDashboard = () => {
       title: { es: 'Checklist Imprimible', en: 'Printable Checklist' },
       subtitle: { es: 'Descarga en PDF', en: 'PDF Download' },
       description: {
-        es: 'Tu mapa de 10 semanas en formato PDF listo para imprimir. Márcalo con pluma, pégalo en tu pared y conquista tu lanzamiento.',
+        es: 'Tu mapa de 10 semanas en formato PDF listo para imprimir. M\u00e1rcalo con pluma, p\u00e9galo en tu pared y conquista tu lanzamiento.',
         en: 'Your 10-week roadmap in printable PDF format. Mark it with a pen, stick it on your wall, and conquer your launch.'
       },
       btnText: { es: 'Descargar PDF', en: 'Download PDF' },
@@ -83,7 +95,6 @@ const ResourcesDashboard = () => {
         </p>
       </div>
 
-      {/* --- FREE SECTION --- */}
       <div className="resource-grid free-resource-grid">
         {freeResources.map((resource) => (
           <div key={resource.id} className="resource-card resource-card--free">
@@ -100,9 +111,8 @@ const ResourcesDashboard = () => {
         ))}
       </div>
 
-      {/* --- PREMIUM SECTION --- */}
       <div className="resources-section-title resources-section-title--premium">
-        ⭐ {lang === 'es' ? 'Arsenal Premium' : 'Premium Arsenal'}
+        \u2b50 {lang === 'es' ? 'Arsenal Premium' : 'Premium Arsenal'}
       </div>
       {!isPremium && (
         <div className="resources-paywall-banner">
@@ -126,7 +136,7 @@ const ResourcesDashboard = () => {
               disabled={!isPremium}
               style={!isPremium ? { opacity: 0.5, cursor: 'not-allowed' } : {}}
             >
-              {isPremium ? resource.btnText[lang] : (lang === 'es' ? '🔒 Premium' : '🔒 Premium')}
+              {isPremium ? resource.btnText[lang] : '\ud83d\udd12 Premium'}
             </button>
           </div>
         ))}
@@ -136,4 +146,3 @@ const ResourcesDashboard = () => {
 };
 
 export default ResourcesDashboard;
-
