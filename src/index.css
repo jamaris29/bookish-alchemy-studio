@@ -272,6 +272,10 @@ a:hover { color: var(--accent-hover); }
 .pw-time-unit { font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); }
 .pw-countdown-sub { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.6rem; font-style: italic; }
 .pw-cta-btn { width: 100%; font-size: 1rem; padding: 0.9rem 1.5rem; }
+.pw-bonus-card { background: linear-gradient(135deg, rgba(80,200,120,0.06), rgba(13,148,136,0.08)); border: 1.5px solid rgba(80,200,120,0.35); border-radius: var(--radius-md); padding: 1.25rem 1.25rem 0.75rem; margin: 1.25rem 0 1.5rem; text-align: left; position: relative; overflow: hidden; }
+.pw-bonus-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #50C878, #0d9488, #50C878); }
+.pw-bonus-text { font-size: 0.92rem; line-height: 1.65; color: var(--text-secondary); margin-bottom: 0.5rem !important; }
+.pw-bonus-value { font-size: 0.85rem; font-weight: 700; color: var(--accent-primary); margin-bottom: 0.75rem !important; }
 
 .week8-urgency-strip { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; background: linear-gradient(90deg, rgba(245,158,11,0.12), rgba(249,115,22,0.08)); border-bottom: 1px solid rgba(245,158,11,0.3); padding: 0.6rem 1.25rem; font-size: 0.85rem; font-weight: 500; color: #f59e0b; }
 .week8-urgency-strip span:first-child { font-size: 1rem; }

@@ -7,13 +7,14 @@ import { roadmapContent } from '../data/roadmapData';
 import TaskAccordion from './TaskAccordion';
 import SuccessControlBanner from './SuccessControlBanner';
 
-const COUNTDOWN_DURATION = 20 * 60;
+// 12 hours in seconds
+const COUNTDOWN_DURATION = 12 * 60 * 60;
 
 const getCountdownExpiry = () => {
-  const stored = sessionStorage.getItem('pw_expiry');
+  const stored = localStorage.getItem('bonus_expiry');
   if (stored) return parseInt(stored, 10);
   const expiry = Date.now() + COUNTDOWN_DURATION * 1000;
-  sessionStorage.setItem('pw_expiry', expiry);
+  localStorage.setItem('bonus_expiry', expiry);
   return expiry;
 };
 
@@ -25,6 +26,9 @@ const Roadmap = () => {
     const expiry = getCountdownExpiry();
     return Math.max(0, Math.round((expiry - Date.now()) / 1000));
   });
+
+  // Bonus is visible only while timeLeft > 0
+  const isBonusActive = timeLeft > 0;
 
   const getVisibleTasks = (tasks) => tasks.filter(task => task.formats.includes(format) || task.formats.includes('Ambos'));
 
@@ -51,17 +55,24 @@ const Roadmap = () => {
 
   const handlePaywallClick = () => setShowPaywall(true);
 
+  // Countdown timer - runs always (not just when modal is open) so bonus state is always accurate
   useEffect(() => {
-    if (!showPaywall || timeLeft <= 0) return;
+    if (timeLeft <= 0) return;
     const timer = setInterval(() => {
       const expiry = getCountdownExpiry();
-      setTimeLeft(Math.max(0, Math.round((expiry - Date.now()) / 1000)));
+      const remaining = Math.max(0, Math.round((expiry - Date.now()) / 1000));
+      setTimeLeft(remaining);
     }, 1000);
     return () => clearInterval(timer);
-  }, [showPaywall, timeLeft]);
+  }, [timeLeft]);
 
-  const formatTime = (secs) => ({ m: String(Math.floor(secs / 60)).padStart(2, '0'), s: String(secs % 60).padStart(2, '0') });
-  const { m, s } = formatTime(timeLeft);
+  // Format time as HH:MM:SS
+  const formatTime = (secs) => ({
+    h: String(Math.floor(secs / 3600)).padStart(2, '0'),
+    m: String(Math.floor((secs % 3600) / 60)).padStart(2, '0'),
+    s: String(secs % 60).padStart(2, '0')
+  });
+  const { h, m, s } = formatTime(timeLeft);
 
   const translations = {
     es: { roadmap: 'Tu Mapa de 10 Semanas', roadmapSub: 'Tu guía paso a paso para un lanzamiento que haga ruido', format: 'Formato', change: 'Cambiar formato', tasksOf: 'de', completed: 'completadas' },
@@ -146,40 +157,72 @@ const Roadmap = () => {
       {showPaywall && (
         <div className="paywall-modal-overlay" onClick={(e) => e.target === e.currentTarget && setShowPaywall(false)}>
           <div className="paywall-modal paywall-modal--urgent">
-            {timeLeft > 0 ? (
-              <>
-                <span className="pw-urgency-badge">{lang === 'es' ? '⚡ Oferta activa ahora mismo' : '⚡ Offer active right now'}</span>
-                <h3 className="modal-title">{lang === 'es' ? 'Tu libro merece llegar más lejos 📖' : 'Your book deserves to go further 📖'}</h3>
-                <p className="pw-empathy">{lang === 'es' ? 'Todos los autores que publican sin un plan dejan dinero y lectores sobre la mesa.' : 'Every author who publishes without a plan leaves money and readers on the table.'}</p>
+            {/* Main headline - always visible */}
+            <h3 className="modal-title">
+              {lang === 'es'
+                ? '¡Estás a un paso de tu plan de lanzamiento perfecto! 🚀'
+                : "You're one step away from your perfect launch plan! 🚀"}
+            </h3>
+            <p className="pw-empathy">
+              {lang === 'es'
+                ? 'Desbloquea el mapa interactivo de 10 semanas de The Bestseller Blueprint por solo $27.'
+                : 'Unlock the interactive 10-week roadmap of The Bestseller Blueprint for just $27.'}
+            </p>
+
+            {/* Bonus Section - hidden via display:none when timer expires */}
+            <div
+              id="bonus-section"
+              style={{ display: isBonusActive ? 'block' : 'none' }}
+            >
+              <div className="pw-bonus-card">
+                <p className="pw-bonus-text">
+                  {lang === 'es'
+                    ? '🎁 Bono de Acción Rápida: ¡Hora de hablar de números reales! Si completas tu inscripción ahora, te llevas GRATIS El Centro de Control de Éxito. Tu nueva herramienta favorita para calcular tus ganancias exactas y fijar tus metas de ventas y reseñas antes del gran día.'
+                    : '🎁 Fast Action Bonus: Time to talk real numbers! If you complete your enrollment now, you get the Success Control Center for FREE. Your new favorite tool to calculate your exact earnings and set your sales and review goals before the big day.'}
+                </p>
+                <p className="pw-bonus-value">
+                  {lang === 'es' ? '(Valorado en $29)' : '(Valued at $29)'}
+                </p>
                 <div className="pw-countdown-wrap">
-                  <p className="pw-countdown-label">{lang === 'es' ? '🔥 Esta pantalla desaparece en' : '🔥 This screen disappears in'}</p>
+                  <p className="pw-countdown-label">
+                    {lang === 'es'
+                      ? '⏳ Esta herramienta de regalo desaparece en:'
+                      : '⏳ This free tool disappears in:'}
+                  </p>
                   <div className="pw-countdown">
-                    <div className="pw-time-block"><span className="pw-time-digit">{m}</span><span className="pw-time-unit">{lang === 'es' ? 'min' : 'min'}</span></div>
+                    <div className="pw-time-block">
+                      <span className="pw-time-digit">{h}</span>
+                      <span className="pw-time-unit">{lang === 'es' ? 'hrs' : 'hrs'}</span>
+                    </div>
                     <span className="pw-time-sep">:</span>
-                    <div className="pw-time-block"><span className="pw-time-digit">{s}</span><span className="pw-time-unit">{lang === 'es' ? 'seg' : 'sec'}</span></div>
+                    <div className="pw-time-block">
+                      <span className="pw-time-digit">{m}</span>
+                      <span className="pw-time-unit">{lang === 'es' ? 'min' : 'min'}</span>
+                    </div>
+                    <span className="pw-time-sep">:</span>
+                    <div className="pw-time-block">
+                      <span className="pw-time-digit">{s}</span>
+                      <span className="pw-time-unit">{lang === 'es' ? 'seg' : 'sec'}</span>
+                    </div>
                   </div>
-                  <p className="pw-countdown-sub">{lang === 'es' ? 'El precio no cambia. Solo queremos que lo pienses de verdad.' : "The price won't change. We just want you to think it through."}</p>
                 </div>
-                <div className="modal-actions">
-                  <a href="https://buy.stripe.com/8x27sMcmHcdu6IZ37R4c802" target="_blank" rel="noreferrer" className="btn-primary mockup-btn pw-cta-btn">
-                    {lang === 'es' ? '🚀 Desbloquear Paquete Completo por $27' : '🚀 Unlock Full Bundle for $27'}
-                  </a>
-                  <button className="text-button" onClick={() => setShowPaywall(false)}>{lang === 'es' ? 'Seguir explorando gratis' : 'Keep exploring for free'}</button>
-                </div>
-              </>
-            ) : (
-              <>
-                <span className="pw-urgency-badge pw-urgency-badge--expired">{lang === 'es' ? '⏰ El tiempo voló…' : '⏰ Time flew by…'}</span>
-                <h3 className="modal-title">{lang === 'es' ? '¡El plan sigue esperando!' : 'The plan is still waiting for you!'}</h3>
-                <p className="pw-empathy">{lang === 'es' ? 'Cuando estés list@ para dar el salto, el acceso completo sigue disponible por $27.' : "When you're ready to take the leap, full access is still available at $27."}</p>
-                <div className="modal-actions">
-                  <a href="https://buy.stripe.com/8x27sMcmHcdu6IZ37R4c802" target="_blank" rel="noreferrer" className="btn-primary mockup-btn pw-cta-btn">
-                    {lang === 'es' ? '💎 Desbloquear por $27' : '💎 Unlock for $27'}
-                  </a>
-                  <button className="text-button" onClick={() => setShowPaywall(false)}>{lang === 'es' ? 'Volver al mapa' : 'Back to the roadmap'}</button>
-                </div>
-              </>
-            )}
+              </div>
+            </div>
+
+            {/* CTA - always $27 */}
+            <div className="modal-actions">
+              <a
+                href="https://buy.stripe.com/8x27sMcmHcdu6IZ37R4c802"
+                target="_blank"
+                rel="noreferrer"
+                className="btn-primary mockup-btn pw-cta-btn"
+              >
+                {lang === 'es' ? '🚀 Desbloquear por $27' : '🚀 Unlock for $27'}
+              </a>
+              <button className="text-button" onClick={() => setShowPaywall(false)}>
+                {lang === 'es' ? 'Seguir explorando gratis' : 'Keep exploring for free'}
+              </button>
+            </div>
           </div>
         </div>
       )}
