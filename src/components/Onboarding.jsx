@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Book, Tablet, LayoutList, ChevronDown } from 'lucide-react';
+import { Book, Tablet, LayoutList, ChevronDown, Lightbulb } from 'lucide-react';
 import { useAppContext } from '../context/AppContext';
 
 const faqData = {
@@ -61,13 +61,7 @@ const Onboarding = () => {
   const { lang, setFormat } = useAppContext();
   const [openIndex, setOpenIndex] = useState(null);
 
-  const handleSelect = (selectedFormat) => {
-    setFormat(selectedFormat);
-  };
-
-  const toggleFaq = (i) => {
-    setOpenIndex(prev => (prev === i ? null : i));
-  };
+  const toggleFaq = (i) => setOpenIndex(prev => (prev === i ? null : i));
 
   const texts = {
     es: {
@@ -76,7 +70,10 @@ const Onboarding = () => {
       digital: 'Solo Digital',
       physical: 'Solo Físico',
       both: 'Ambos',
-      faqTitle: '¿Dudas antes de empezar? Te las aclaramos todas.',
+      faqTitle: 'Preguntas frecuentes',
+      brandHeadline: 'Tu historia es tuya. El plan de ventas, déjanoslo a nosotras.',
+      brandBody: 'Hoy en día, hay mucho ruido sobre la IA en el mundo literario. Queremos ser claras: nuestra herramienta no escribe libros. Está diseñada para aliviar el mayor dolor de cabeza de los autores independientes: el marketing. Usamos tecnología de punta solo para organizar tus fechas, estrategias y entregables. Siéntete orgullosa de tu arte, porque el talento es todo tuyo. Nosotras solo te equipamos para que no lances a ciegas.',
+      tipLabel: '💡 Nuestra promesa',
     },
     en: {
       title: 'In what format will you publish your book?',
@@ -84,7 +81,10 @@ const Onboarding = () => {
       digital: 'Digital Only',
       physical: 'Physical Only',
       both: 'Both',
-      faqTitle: 'Questions before you start? We answer them all.',
+      faqTitle: 'Frequently Asked Questions',
+      brandHeadline: 'Your story is yours. The sales plan? Leave it to us.',
+      brandBody: 'There\'s a lot of noise about AI in the literary world. We want to be clear: our tool doesn\'t write books. It\'s designed to relieve the biggest headache of independent authors: marketing. We use cutting-edge technology only to organize your dates, strategies, and deliverables. Feel proud of your art, because the talent is all yours. We just equip you so you don\'t launch blindly.',
+      tipLabel: '💡 Our promise',
     }
   };
 
@@ -98,53 +98,56 @@ const Onboarding = () => {
         <p className="subtitle">{t.subtitle}</p>
 
         <div className="options-grid">
-          <button className="option-card" onClick={() => handleSelect('Digital')}>
+          <button className="option-card" onClick={() => setFormat('Digital')}>
             <Tablet size={48} className="icon-primary" />
             <span className="option-label">{t.digital}</span>
           </button>
-
-          <button className="option-card" onClick={() => handleSelect('Físico')}>
+          <button className="option-card" onClick={() => setFormat('Físico')}>
             <Book size={48} className="icon-primary" />
             <span className="option-label">{t.physical}</span>
           </button>
-
-          <button className="option-card" onClick={() => handleSelect('Ambos')}>
+          <button className="option-card" onClick={() => setFormat('Ambos')}>
             <LayoutList size={48} className="icon-primary" />
             <span className="option-label">{t.both}</span>
           </button>
         </div>
 
-        {/* ── FAQ Accordion ── */}
-        <div className="faq-section">
-          <h3 className="faq-section-title">{t.faqTitle}</h3>
-          <div className="faq-list">
-            {faqs.map((item, i) => {
-              const isOpen = openIndex === i;
-              return (
-                <div
-                  key={i}
-                  className={`faq-item ${isOpen ? 'faq-item--open' : ''}`}
-                >
-                  <button
-                    className="faq-question"
-                    onClick={() => toggleFaq(i)}
-                    aria-expanded={isOpen}
-                  >
-                    <span>{item.q}</span>
-                    <ChevronDown
-                      size={18}
-                      className={`faq-chevron ${isOpen ? 'faq-chevron--open' : ''}`}
-                    />
-                  </button>
-                  {isOpen && (
-                    <div className="faq-answer">
-                      <p>{item.a}</p>
-                    </div>
-                  )}
-                </div>
-              );
-            })}
+        {/* ── 2-Column bottom section ── */}
+        <div className="onboarding-bottom-grid">
+
+          {/* LEFT — FAQ */}
+          <div className="onboarding-faq-col">
+            <h3 className="faq-section-title" style={{ textAlign: 'left', marginBottom: '1rem' }}>{t.faqTitle}</h3>
+            <div className="faq-list">
+              {faqs.map((item, i) => {
+                const isOpen = openIndex === i;
+                return (
+                  <div key={i} className={`faq-item ${isOpen ? 'faq-item--open' : ''}`}>
+                    <button className="faq-question" onClick={() => toggleFaq(i)} aria-expanded={isOpen}>
+                      <span>{item.q}</span>
+                      <ChevronDown size={18} className={`faq-chevron ${isOpen ? 'faq-chevron--open' : ''}`} />
+                    </button>
+                    {isOpen && (
+                      <div className="faq-answer"><p>{item.a}</p></div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
+
+          {/* RIGHT — Brand message */}
+          <div className="onboarding-brand-col">
+            <div className="brand-promise-card">
+              <div className="brand-promise-icon">
+                <Lightbulb size={28} />
+              </div>
+              <span className="brand-promise-label">{t.tipLabel}</span>
+              <h3 className="brand-promise-headline">{t.brandHeadline}</h3>
+              <p className="brand-promise-body">{t.brandBody}</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -152,4 +155,3 @@ const Onboarding = () => {
 };
 
 export default Onboarding;
-

@@ -3,9 +3,11 @@ import { createContext, useState, useEffect, useContext } from 'react';
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-  // Premium state (for testing/unlocking)
+  // Premium state — set to true to preview all premium content
   const [isPremium, setIsPremium] = useState(() => {
-    return localStorage.getItem('isPremium') === 'true';
+    const stored = localStorage.getItem('isPremium');
+    // Default true so all features are visible for review
+    return stored !== null ? stored === 'true' : true;
   });
 
   // Theme state

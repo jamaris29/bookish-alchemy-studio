@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram } from 'lucide-react';
+import { Instagram, Mail } from 'lucide-react';
 import { useAppContext } from '../context/AppContext';
 
 const Footer = () => {
@@ -19,14 +19,21 @@ const Footer = () => {
           </p>
         </div>
         <div className="footer-socials">
-          <a 
-            href="https://www.instagram.com/bookishalchemyai/" 
-            target="_blank" 
-            rel="noreferrer" 
+          <a
+            href="https://www.instagram.com/bookishalchemy.ai/"
+            target="_blank"
+            rel="noreferrer"
             className="social-link"
             aria-label="Instagram"
           >
-            <Instagram size={24} />
+            <Instagram size={22} />
+          </a>
+          <a
+            href="mailto:bookish@thebestsellerblueprint.projectalchemylab.com"
+            className="social-link"
+            aria-label="Email"
+          >
+            <Mail size={22} />
           </a>
         </div>
       </div>

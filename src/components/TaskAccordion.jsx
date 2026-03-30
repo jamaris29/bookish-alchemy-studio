@@ -66,6 +66,16 @@ const TaskAccordion = ({ task, isLocked, onPaywallClick }) => {
                 >
                   📸 {lang === 'es' ? 'Encuéntranos en Instagram' : 'Find us on Instagram'}
                 </a>
+              ) : task.upsell.price === 'Free' ? (
+                <a
+                  href={task.upsell.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn-primary"
+                  style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '6px', background: 'linear-gradient(135deg, #059669, #10b981)' }}
+                >
+                  ✨ {lang === 'es' ? 'Abrir Herramienta Gratis' : 'Open Free Tool'}
+                </a>
               ) : task.upsell.price === 'Próximamente' ? (
                 <button className="btn-primary" disabled style={{ opacity: 0.7, cursor: 'not-allowed' }}>
                    {lang === 'es' ? 'Próximamente' : 'Coming Soon'}

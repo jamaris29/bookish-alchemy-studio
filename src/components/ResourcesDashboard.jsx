@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Sparkles, FileDown, ArrowLeft, Download, Star, BarChart2 } from 'lucide-react';
+import { Mail, Sparkles, FileDown, ArrowLeft, Download, Star, BarChart2, Lock } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useAppContext } from '../context/AppContext';
 import EmailScripts from './EmailScripts';
@@ -9,26 +9,25 @@ const ResourcesDashboard = () => {
   const [showEmailScripts, setShowEmailScripts] = useState(false);
   const navigate = useNavigate();
 
-  if (showEmailScripts) {
-    return <EmailScripts onBack={() => setShowEmailScripts(false)} />;
-  }
+  if (showEmailScripts) return <EmailScripts onBack={() => setShowEmailScripts(false)} />;
 
+  // FREE resources — Prompter now first and free
   const freeResources = [
     {
-      id: 'aplus',
-      icon: <Download size={32} />,
-      title: { es: 'Plantillas Amazon A+ Imán de Ventas', en: 'Amazon A+ Sales Magnet Templates' },
-      subtitle: { es: 'Descarga gratuita', en: 'Free download' },
+      id: 'prompter',
+      icon: <Sparkles size={32} />,
+      title: { es: 'Prompter Editorial IA', en: 'AI Editorial Prompter' },
+      subtitle: { es: 'Gratis para todos', en: 'Free for everyone' },
       description: {
-        es: 'Plantillas de diseño listas para usar en tu página de Amazon. Crea contenido A+ que convierta visitantes en compradores en minutos.',
-        en: 'Ready-to-use design templates for your Amazon page. Create A+ content that converts visitors into buyers in minutes.'
+        es: 'Un bot de IA entrenado para generar tu psicografía de lector, tropos principales y estrategia de contenido automáticamente. Tu primer paso estratégico.',
+        en: 'An AI bot trained to generate your reader psychographics, main tropes, and content strategy automatically. Your strategic first step.'
       },
-      btnText: { es: 'Descargar Plantillas', en: 'Download Templates' },
-      isFree: true,
-      action: () => window.open('https://drive.google.com/drive/folders/1nBA34T9U0McOGDnJfWyS-jgYUZgg53Aq?usp=drive_link', '_blank')
+      btnText: { es: '✨ Abrir Prompter IA', en: '✨ Open AI Prompter' },
+      action: () => window.open('https://gemini.google.com/gem/d3e013f0a080', '_blank')
     }
   ];
 
+  // PREMIUM resources — A+ Templates now locked here
   const premiumResources = [
     {
       id: 'success-center',
@@ -55,16 +54,16 @@ const ResourcesDashboard = () => {
       action: () => setShowEmailScripts(true)
     },
     {
-      id: 'prompter',
-      icon: <Sparkles size={32} />,
-      title: { es: 'Prompter Editorial', en: 'Editorial Prompter' },
-      subtitle: { es: 'IA Gemini personalizada', en: 'Custom Gemini AI' },
+      id: 'aplus',
+      icon: <Download size={32} />,
+      title: { es: 'Plantillas Amazon A+ Imán de Ventas', en: 'Amazon A+ Sales Magnet Templates' },
+      subtitle: { es: 'Canva listo para usar', en: 'Ready-to-use Canva' },
       description: {
-        es: 'Un bot de IA entrenado para generar tu psicografía de lector, tropos principales y estrategia de contenido automáticamente.',
-        en: 'An AI bot trained to generate your reader psychographics, main tropes, and content strategy automatically.'
+        es: 'Plantillas de diseño listas para Canva para tu página de Amazon. Crea contenido A+ que convierta visitantes en compradores en minutos.',
+        en: 'Ready-to-use Canva design templates for your Amazon page. Create A+ content that converts visitors into buyers in minutes.'
       },
-      btnText: { es: 'Abrir Prompter IA', en: 'Open AI Prompter' },
-      action: () => window.open('https://gemini.google.com/gem/d3e013f0a080', '_blank')
+      btnText: { es: '⬇ Descargar Plantillas', en: '⬇ Download Templates' },
+      action: () => window.open('https://drive.google.com/drive/folders/1nBA34T9U0McOGDnJfWyS-jgYUZgg53Aq?usp=drive_link', '_blank')
     },
     {
       id: 'checklist',
@@ -90,8 +89,8 @@ const ResourcesDashboard = () => {
         <h2>{lang === 'es' ? 'Recursos' : 'Resources'}</h2>
         <p className="resources-subtitle">
           {lang === 'es'
-            ? 'Descarga gratuita y herramientas exclusivas para tu lanzamiento.'
-            : 'Free downloads and exclusive tools for your launch.'}
+            ? 'Herramientas gratuitas y exclusivas para tu lanzamiento.'
+            : 'Free and exclusive tools for your launch.'}
         </p>
       </div>
 
@@ -104,8 +103,7 @@ const ResourcesDashboard = () => {
             <h3>{resource.title[lang]}</h3>
             <span className="resource-subtitle">{resource.subtitle[lang]}</span>
             <p className="resource-description">{resource.description[lang]}</p>
-            <button className="btn-primary resource-btn btn-download" onClick={resource.action}>
-              <Download size={18} />
+            <button className="btn-primary resource-btn" onClick={resource.action}>
               {resource.btnText[lang]}
             </button>
           </div>
@@ -118,7 +116,7 @@ const ResourcesDashboard = () => {
       </div>
       {!isPremium && (
         <div className="resources-paywall-banner">
-          <Star size={20} />
+          <Lock size={20} />
           <p>{lang === 'es' ? 'Desbloquea las herramientas Premium por $27' : 'Unlock Premium tools for $27'}</p>
           <a href="https://buy.stripe.com/8x27sMcmHcdu6IZ37R4c802" target="_blank" rel="noreferrer" className="btn-primary">
             {lang === 'es' ? 'Desbloquear' : 'Unlock'}
@@ -148,4 +146,3 @@ const ResourcesDashboard = () => {
 };
 
 export default ResourcesDashboard;
-

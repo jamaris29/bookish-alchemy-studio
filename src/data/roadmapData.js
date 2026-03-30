@@ -1,5 +1,57 @@
 export const roadmapContent = [
   {
+    weekId: 'bonus-escudo',
+    isFree: false,
+    isBonus: true,
+    title: {
+      es: '🎁 Bono Especial: El Escudo del Autor (Valorado en $29)',
+      en: '🎁 Special Bonus: The Author\'s Shield (Valued at $29)'
+    },
+    subtitle: {
+      es: '¿Vas a publicar con una editorial o en coedición? No lances a ciegas.',
+      en: 'Are you publishing with a traditional publisher or co-publishing? Don\'t launch blindly.'
+    },
+    tasks: [
+      {
+        id: 'bonus-escudo-t1',
+        formats: ['Digital', 'Físico', 'Ambos'],
+        title: {
+          es: 'Qué exigir exactamente en tu contrato',
+          en: 'What to demand exactly in your contract'
+        },
+        description: {
+          es: 'Descubre las cláusulas críticas: fechas de publicación, quién paga los marcapáginas y portadas, derechos de autor en formato digital vs. físico, y cláusulas de rescisión.',
+          en: 'Discover critical clauses: publication dates, who pays for bookmarks and covers, digital vs physical copyrights, and termination clauses.'
+        }
+      },
+      {
+        id: 'bonus-escudo-t2',
+        formats: ['Digital', 'Físico', 'Ambos'],
+        title: {
+          es: 'La Sinergia del Lanzamiento — cómo se divide el esfuerzo de ventas',
+          en: 'The Launch Synergy — how sales effort is divided'
+        },
+        description: {
+          es: 'Existe el mito de que firmar un contrato significa que la editorial hará todo el marketing por ti. La realidad es muy diferente. Aprende cómo se divide realmente el esfuerzo de ventas entre tú y la editorial.',
+          en: 'There\'s a myth that signing a contract means the publisher will do all the marketing for you. The reality is very different. Learn how sales effort is really divided between you and the publisher.'
+        }
+      },
+      {
+        id: 'bonus-escudo-t3',
+        formats: ['Digital', 'Físico', 'Ambos'],
+        title: {
+          es: 'Tu checklist de supervivencia editorial',
+          en: 'Your editorial survival checklist'
+        },
+        description: {
+          es: 'Si autopublicas 100% por tu cuenta, esta guía también te revelará secretos de la industria tradicional que puedes aplicar a tu negocio independiente.',
+          en: 'If you self-publish 100%, this guide will also reveal secrets of the traditional industry that you can apply to your independent business.'
+        }
+      }
+    ]
+  },
+  {
+
     weekId: 10,
     isFree: true,
     title: { es: '⏳ Semana 10: Los cimientos', en: '⏳ Week 10: The Foundations' },
@@ -22,12 +74,12 @@ export const roadmapContent = [
         upsell: {
           id: 'prompt-gemini',
           type: 'tool',
-          title: { es: '¿Necesitas ayuda con esto?', en: 'Need help with this?' },
+          title: { es: '✨ Herramienta Gratuita', en: '✨ Free Tool' },
           text: {
-            es: 'Desbloquea nuestro Prompter Editorial (Bot Gemini Personalizado) para generar tu psicografía y tropos automáticamente.',
-            en: 'Unlock our Editorial Prompter (Custom Gemini Bot) to generate your psychographics and tropes automatically.'
+            es: 'Usa nuestro Prompter Editorial (Bot Gemini Personalizado) gratis para generar tu psicografía de lector y tropos automáticamente.',
+            en: 'Use our free Editorial Prompter (Custom Gemini Bot) to generate your reader psychographics and tropes automatically.'
           },
-          price: 'Incluido en Premium',
+          price: 'Free',
           link: 'https://gemini.google.com/gem/d3e013f0a080'
         }
       },
@@ -65,6 +117,30 @@ export const roadmapContent = [
         description: {
           es: 'Por qué: Nunca imprimas mil libros sin ver cómo lucen los colores y los márgenes en papel.\n\nPaso a paso: Sube el PDF de tu manuscrito formateado y la portada a tu panel de Amazon KDP (como borrador). Ve a las opciones del libro y selecciona "Solicitar copia de prueba". Te enviarán un ejemplar físico con una banda de "No para la venta" para que revises errores.',
           en: 'Why: Never print a thousand books without seeing how colors and margins look on paper.\n\nStep by step: Upload the PDF of your formatted manuscript and cover to your Amazon KDP panel (as a draft). Go to the book options and select "Request proof copy". They\'ll send you a physical copy with a "Not for Sale" band so you can review errors.'
+        }
+      },
+      {
+        id: 'w10-t5',
+        formats: ['Digital', 'Físico', 'Ambos'],
+        title: {
+          es: '[Todos] Finalizar diseño de portada profesional',
+          en: '[Everyone] Finalize professional cover design'
+        },
+        description: {
+          es: 'Por qué: La portada es tu anuncio #1. Si no cumple con los códigos visuales de tu género, los lectores la ignoran.\n\nPaso a paso: Verifica que tu portada cumpla estos 3 criterios: 1) Es reconocible como su género en miniatura (thumbnail de Amazon). 2) La tipografía es legible a tamaño pequeño. 3) La paleta de colores compite con los bestsellers de tu categoría. Si no cumple, es hora de invertir en un diseñador profesional.',
+          en: 'Why: Your cover is your #1 advertisement. If it doesn\'t meet the visual codes of your genre, readers will ignore it.\n\nStep by step: Verify your cover meets these 3 criteria: 1) It\'s recognizable as its genre in thumbnail size (Amazon thumbnail). 2) The typography is readable at small size. 3) The color palette competes with the bestsellers in your category. If it doesn\'t pass, it\'s time to invest in a professional designer.'
+        }
+      },
+      {
+        id: 'w10-t6',
+        formats: ['Digital', 'Físico', 'Ambos'],
+        title: {
+          es: '[Todos] Crear Lead Magnet de alta conversión',
+          en: '[Everyone] Create a high-conversion Lead Magnet'
+        },
+        description: {
+          es: 'Por qué: Un "imán de lectores" es lo que convierte un visitante curioso en un suscriptor que comprará tu libro.\n\nPaso a paso: Elige uno de estos formatos: una precuela exclusiva, una escena eliminada, una guía temática relacionada con tu libro, o el primer capítulo extendido. Créalo en PDF con diseño atractivo (usa Canva). Este será el incentivo para que dejen su correo electrónico en tu Landing Page.',
+          en: 'Why: A "lead magnet" is what converts a curious visitor into a subscriber who will buy your book.\n\nStep by step: Choose one of these formats: an exclusive prequel, a deleted scene, a thematic guide related to your book, or an extended first chapter. Create it as a nicely designed PDF (use Canva). This will be the incentive for leaving their email on your Landing Page.'
         }
       }
     ]
@@ -110,7 +186,7 @@ export const roadmapContent = [
             en: 'At Bookish Alchemy AI Studio we create your images, teasers, and covers with high-quality AI.'
           },
           price: 'Social',
-          link: 'https://www.instagram.com/bookishalchemyai/'
+          link: 'https://www.instagram.com/bookishalchemy.ai/'
         }
       },
       {
@@ -193,6 +269,18 @@ export const roadmapContent = [
         description: {
           es: 'Por qué: Los lugares se reservan rápido.\n\nPaso a paso: Contacta a tu librería local, café literario o centro cultural. Fija la fecha (idealmente el mismo fin de semana de tu lanzamiento digital) y acuerda los detalles de espacio.',
           en: 'Why: Venues get booked fast.\n\nStep by step: Contact your local bookstore, literary café, or cultural center. Set the date (ideally the same weekend as your digital launch) and agree on space details.'
+        }
+      },
+      {
+        id: 'w8-t3',
+        formats: ['Digital', 'Físico', 'Ambos'],
+        title: {
+          es: '[Todos] Crear sistema de seguimiento ARC',
+          en: '[Everyone] Create ARC tracking system'
+        },
+        description: {
+          es: 'Por qué: Sin un sistema organizado, perderás el control de quién tiene el manuscrito, quién ya leyó y quién aún no ha dejado su reseña.\n\nPaso a paso: Crea una hoja de cálculo (Google Sheets o Notion) con columnas: Nombre, Email, Fecha de envío, ¿Recibió el libro?, ¿Ya leyó?, ¿Dejó reseña?, Enlace a reseña. Personaliza la comunicación para fomentar el compromiso individual.',
+          en: 'Why: Without an organized system, you\'ll lose track of who has the manuscript, who has read it, and who hasn\'t left their review yet.\n\nStep by step: Create a spreadsheet (Google Sheets or Notion) with columns: Name, Email, Send date, Received book?, Already read?, Left review?, Review link. Personalize communication to foster individual commitment.'
         }
       }
     ]
@@ -288,6 +376,18 @@ export const roadmapContent = [
           es: 'Por qué: El correo puede retrasarse.\n\nPaso a paso: Ve a la oficina de correos y envía las cajas a los creadores de contenido clave (Bookstagrammers/Booktokers) con los que hayas contactado previamente.',
           en: 'Why: Mail can be delayed.\n\nStep by step: Go to the post office and send the boxes to key content creators (Bookstagrammers/Booktokers) you\'ve previously contacted.'
         }
+      },
+      {
+        id: 'w6-t3',
+        formats: ['Digital', 'Físico', 'Ambos'],
+        title: {
+          es: '[Todos] Contactar influencers con técnica "pila de elogios"',
+          en: '[Everyone] Contact influencers with "praise stack" technique'
+        },
+        description: {
+          es: 'Por qué: Los influencers literarios (BookTok, Bookstagram) son el canal de descubrimiento #1 para los lectores jóvenes.\n\nPaso a paso: Identifica 10-15 creadores de contenido de tu nicho. Escríbeles un DM aplicando la "pila de elogios": 1) Elogia algo específico de su contenido. 2) Explica por qué tu libro encaja con su audiencia. 3) Ofrece una colaboración creativa (no solo "¿puedes reseñar mi libro?"). Ejemplo: "Me encantó tu video sobre tropos de enemies-to-lovers. Mi novela tiene exactamente eso + un giro que nadie espera. ¿Te gustaría leerla antes que nadie?"',
+          en: 'Why: Literary influencers (BookTok, Bookstagram) are the #1 discovery channel for young readers.\n\nStep by step: Identify 10-15 content creators in your niche. Send them a DM applying the "praise stack": 1) Praise something specific about their content. 2) Explain why your book fits their audience. 3) Offer a creative collaboration (not just "can you review my book?"). Example: "I loved your video about enemies-to-lovers tropes. My novel has exactly that + a twist nobody expects. Would you like to read it before anyone else?"'
+        }
       }
     ]
   },
@@ -363,6 +463,18 @@ export const roadmapContent = [
         description: {
           es: 'Por qué: Tu comunidad local necesita tiempo para agendar la fecha.\n\nPaso a paso: Diseña una invitación digital clara con Fecha, Hora, Lugar, y qué esperar (lectura, firma de libros, brindis). Publícala en tus redes y envíala por WhatsApp a tus allegados.',
           en: 'Why: Your local community needs time to schedule the date.\n\nStep by step: Design a clear digital invitation with Date, Time, Location, and what to expect (reading, book signing, toast). Post it on your social media and send it via WhatsApp to your close ones.'
+        }
+      },
+      {
+        id: 'w4-t3',
+        formats: ['Digital', 'Físico', 'Ambos'],
+        title: {
+          es: '[Todos] Probar Amazon Ads con bajo presupuesto',
+          en: '[Everyone] Test Amazon Ads with low budget'
+        },
+        description: {
+          es: 'Por qué: Ejecutar campañas de prueba ANTES del lanzamiento te permite descubrir qué palabras clave generan más clics y afinar la descripción de tu libro basándote en datos reales.\n\nPaso a paso: Configura tu cuenta de Amazon Advertising. Crea 2-3 campañas Sponsored Products con presupuesto diario de $2-5 USD. Usa targeting automático primero para descubrir keywords. Deja correr 5-7 días y analiza: ¿Qué palabras clave generan clics? ¿Cuál es tu ACOS (costo de publicidad sobre ventas)?',
+          en: 'Why: Running test campaigns BEFORE launch lets you discover which keywords generate more clicks and refine your book description based on real data.\n\nStep by step: Set up your Amazon Advertising account. Create 2-3 Sponsored Products campaigns with $2-5 USD daily budget. Use automatic targeting first to discover keywords. Let it run 5-7 days and analyze: Which keywords generate clicks? What\'s your ACOS (advertising cost of sales)?'
         }
       }
     ]
@@ -448,6 +560,33 @@ export const roadmapContent = [
           es: 'Por qué: Para el evento presencial no te puede faltar nada operativo.\n\nPaso a paso: Empaca en un bolso: bolígrafos permanentes (Sharpies que no manchen), post-its (para preguntar el nombre a quien le firmas), una terminal de pago (si cobras con tarjeta), cambio en efectivo y botellas de agua.',
           en: 'Why: For the in-person event you can\'t be missing any operational items.\n\nStep by step: Pack in a bag: permanent markers (Sharpies that don\'t smudge), post-its (to ask the name of who you\'re signing for), a payment terminal (if you charge by card), cash change, and water bottles.'
         }
+      },
+      {
+        id: 'w2-t4',
+        formats: ['Digital', 'Físico', 'Ambos'],
+        title: { es: '[Todos] Ejecutar Lanzamiento Suave (Soft Launch)', en: '[Everyone] Execute Soft Launch' },
+        description: {
+          es: 'Por qué: Un lanzamiento suave te permite detectar errores antes de que miles de personas los vean.\n\nPaso a paso: Publica tu libro de manera discreta (sin hacer promoción masiva todavía). Verifica que: la portada se ve bien en todos los dispositivos, los enlaces de compra funcionan, la descripción no tiene errores, y el "Look Inside" de Amazon muestra las páginas correctas.',
+          en: 'Why: A soft launch lets you detect errors before thousands of people see them.\n\nStep by step: Publish your book quietly (without massive promotion yet). Verify that: the cover looks good on all devices, purchase links work, the description has no errors, and Amazon\'s "Look Inside" shows the correct pages.'
+        }
+      },
+      {
+        id: 'w2-t5',
+        formats: ['Digital', 'Físico', 'Ambos'],
+        title: { es: '[Todos] Limpiar dudas del lector en descripción Amazon', en: '[Everyone] Clear reader doubts in Amazon description' },
+        description: {
+          es: 'Por qué: Cada duda sin resolver es una barrera de compra.\n\nPaso a paso: Actualiza la descripción de tu libro para resolver objeciones comunes: "¿Es para principiantes?", "¿Es parte de una saga?", "¿Tiene contenido fuerte?". Agrega una sección de "Para quién es este libro" y "Para quién NO es". Esto alimenta también a la IA de Amazon (Rufus) con palabras clave adicionales.',
+          en: 'Why: Every unresolved doubt is a purchase barrier.\n\nStep by step: Update your book description to resolve common objections: "Is it for beginners?", "Is it part of a series?", "Does it have strong content?". Add a "Who this book is for" and "Who it\'s NOT for" section. This also feeds Amazon\'s AI (Rufus) with additional keywords.'
+        }
+      },
+      {
+        id: 'w2-t6',
+        formats: ['Digital', 'Físico', 'Ambos'],
+        title: { es: '[Todos] Coordinar Street Team para contenido de lanzamiento', en: '[Everyone] Coordinate Street Team for launch content' },
+        description: {
+          es: 'Por qué: Tus promotores más activos necesitan tener el contenido listo ANTES del día del lanzamiento.\n\nPaso a paso: Confirma con tus promotores que tienen listo: 1) Su reseña escrita (aunque aún no la publiquen). 2) Al menos 2-3 posts/stories/reels para compartir durante la semana de lanzamiento. 3) Los enlaces correctos de compra. Envíales un "kit de lanzamiento" con imágenes, quotes del libro y hashtags sugeridos.',
+          en: 'Why: Your most active promoters need to have their content ready BEFORE launch day.\n\nStep by step: Confirm with your promoters that they have ready: 1) Their written review (even if they don\'t publish it yet). 2) At least 2-3 posts/stories/reels to share during launch week. 3) The correct purchase links. Send them a "launch kit" with images, book quotes, and suggested hashtags.'
+        }
       }
     ]
   },
@@ -494,6 +633,53 @@ export const roadmapContent = [
         description: {
           es: 'Por qué: Celebrar con tu comunidad física.\n\nPaso a paso: ¡Disfruta tu momento! Pero antes de empezar, delégale tu celular a un amigo o familiar con una misión estricta: tomar fotos y grabar clips cortos de ti firmando libros y hablando. Ese material te servirá como contenido para redes durante meses.',
           en: 'Why: Celebrate with your physical community.\n\nStep by step: Enjoy your moment! But before starting, delegate your phone to a friend or family member with a strict mission: take photos and record short clips of you signing books and speaking. That material will serve as social media content for months.'
+        }
+      }
+    ]
+  },
+  {
+    weekId: 0,
+    isFree: false,
+    title: { es: '🚀 Semana 0: Después del lanzamiento', en: '🚀 Week 0: Post-Launch' },
+    subtitle: {
+      es: 'El lanzamiento no termina el Día 1. Aquí es donde separas un libro olvidado de un bestseller sostenido.',
+      en: 'The launch doesn\'t end on Day 1. This is where you separate a forgotten book from a sustained bestseller.'
+    },
+    tasks: [
+      {
+        id: 'w0-t1',
+        formats: ['Digital', 'Físico', 'Ambos'],
+        title: { es: '[Todos] Analizar métricas de la primera semana', en: '[Everyone] Analyze first week metrics' },
+        description: {
+          es: 'Por qué: Los datos de la primera semana te dicen exactamente qué funcionó y qué no.\n\nPaso a paso: Revisa: 1) Ventas totales y ranking por día. 2) Número de reseñas recibidas vs. esperadas. 3) Rendimiento de Amazon Ads (ACOS, clics, impresiones). 4) Tasa de apertura y clics de tus emails. 5) Métricas de redes sociales (alcance, engagement, seguidores nuevos). Crea un documento con estos datos — los necesitarás para tu próximo libro.',
+          en: 'Why: First week data tells you exactly what worked and what didn\'t.\n\nStep by step: Review: 1) Total sales and ranking per day. 2) Number of reviews received vs. expected. 3) Amazon Ads performance (ACOS, clicks, impressions). 4) Email open and click rates. 5) Social media metrics (reach, engagement, new followers). Create a document with this data — you\'ll need it for your next book.'
+        }
+      },
+      {
+        id: 'w0-t2',
+        formats: ['Digital', 'Físico', 'Ambos'],
+        title: { es: '[Todos] Optimizar campañas de Amazon Ads', en: '[Everyone] Optimize Amazon Ads campaigns' },
+        description: {
+          es: 'Por qué: Después de 7+ días, tienes datos suficientes para matar lo que no funciona y escalar lo que sí.\n\nPaso a paso: Revisa tus campañas de Sponsored Products. Pausa keywords con más de 10 clics y 0 ventas. Aumenta el presupuesto en keywords con buen ACOS (<40%). Crea nuevas campañas manuales con las keywords ganadoras del targeting automático.',
+          en: 'Why: After 7+ days, you have enough data to kill what doesn\'t work and scale what does.\n\nStep by step: Review your Sponsored Products campaigns. Pause keywords with more than 10 clicks and 0 sales. Increase budget on keywords with good ACOS (<40%). Create new manual campaigns with winning keywords from automatic targeting.'
+        }
+      },
+      {
+        id: 'w0-t3',
+        formats: ['Digital', 'Físico', 'Ambos'],
+        title: { es: '[Todos] Enviar email de agradecimiento + pedir reseñas', en: '[Everyone] Send thank you email + request reviews' },
+        description: {
+          es: 'Por qué: Los compradores de la primera semana son tu mejor fuente de reseñas orgánicas.\n\nPaso a paso: Envía un correo personal a tu lista segmentando a quienes compraron. Agradece genuinamente su apoyo. Incluye un enlace directo a la página de reseñas de Amazon y un recordatorio amable: "Si el libro te gustó, una reseña de 2 frases ayuda más de lo que imaginas. Si no te gustó, escríbeme a mí directamente — quiero mejorar."',
+          en: 'Why: First week buyers are your best source of organic reviews.\n\nStep by step: Send a personal email to your list segmenting those who bought. Genuinely thank them for their support. Include a direct link to the Amazon review page and a gentle reminder: "If you liked the book, a 2-sentence review helps more than you imagine. If you didn\'t like it, write to me directly — I want to improve."'
+        }
+      },
+      {
+        id: 'w0-t4',
+        formats: ['Digital', 'Físico', 'Ambos'],
+        title: { es: '[Todos] Planificar estrategia de sostenimiento a 90 días', en: '[Everyone] Plan 90-day sustainability strategy' },
+        description: {
+          es: 'Por qué: El 90% de los autores abandonan el marketing después de la primera semana. Los que persisten son los que construyen carreras.\n\nPaso a paso: Crea un plan de 90 días con: 1) Frecuencia de publicación en redes (mínimo 3x/semana). 2) Calendario de emails a tu lista (mínimo 2x/mes). 3) Presupuesto mensual de Amazon Ads. 4) Lista de sitios de promoción para rotación mensual (Bargain Booksy, BookBub, ENT). 5) Fecha tentativa para tu próximo libro o novella.',
+          en: 'Why: 90% of authors abandon marketing after the first week. Those who persist are the ones who build careers.\n\nStep by step: Create a 90-day plan with: 1) Social media posting frequency (minimum 3x/week). 2) Email calendar to your list (minimum 2x/month). 3) Monthly Amazon Ads budget. 4) List of promo sites for monthly rotation (Bargain Booksy, BookBub, ENT). 5) Tentative date for your next book or novella.'
         }
       }
     ]

@@ -1,0 +1,30 @@
+﻿Si fueras a diseñar una web app interactiva con un programa de 10 semanas para un escritor independiente, la mejor forma de estructurarla sería basándote en la arquitectura estratégica de lanzamientos para el ecosistema editorial de 2026 1.
+A continuación, te presento el checklist exacto, semana a semana, hasta llegar a la última semana de lanzamiento:
+📱 Checklist de la Web App: Lanzamiento Editorial de 10 Semanas
+Fase 1: Cimentación y Desarrollo de Audiencia (Semanas 10 y 9)
+*  Definir al lector ideal: Analiza a tu audiencia no solo por demografía, sino de forma psicográfica (identificando sus valores, miedos y los problemas que tu libro resuelve) 2.
+*  Crear tu "hub" digital: Configura un sitio web profesional y un sistema de captura de correos electrónicos, ya que la lista de correo es tu activo más valioso frente a los algoritmos 2.
+*  Desarrollar un "imán de lectores" (Lead Magnet): Crea un incentivo de alta conversión, como una precuela, una escena eliminada o una guía gratuita, para regalar a cambio de suscripciones 3.
+*  Finalizar la portada: Asegúrate de tener una portada profesional que cumpla con los códigos visuales de tu género y sea legible en tamaño miniatura 3.
+Fase 2: Gestión de la Prueba Social y Equipo ARC (Semanas 8 y 7)
+*  Reclutar al Equipo ARC: Organiza a tu equipo de "Copias de Lectura Avanzada" (lectores fieles dispuestos a dejar una reseña el día del lanzamiento) 4.
+*  Crear un sistema de seguimiento: Usa una hoja de cálculo para registrar quién recibe el libro y personaliza la comunicación para fomentar el compromiso 5.
+*  Preparar la distribución segura: Configura la entrega de tu manuscrito en plataformas que protejan el archivo, como BookFunnel o StoryOrigin 5.
+Fase 3: Estrategia de Contenidos e Influencers (Semanas 6 y 5)
+*  Generar contenido en redes: Comienza a publicar en plataformas como TikTok (BookTok) e Instagram, utilizando ganchos emocionales fuertes (ej. "El giro en la página 250 que me destrozó") 6.
+*  Contactar influencers: Aplica la técnica de la "pila de elogios" para escribir a creadores de contenido de tu nicho, ofreciéndoles colaboraciones creativas en lugar de solo pedirles reseñas frías 7.
+Fase 4: Metadatos y Preventa (Semanas 4 y 3)
+*  Optimizar categorías: Investiga y selecciona un máximo de 3 subcategorías nicho en Amazon KDP donde tengas verdaderas oportunidades de alcanzar el número uno 8.
+*  Activar la preventa: Publica la página de preventa del eBook. Todas las ventas acumuladas ahora contarán para el ranking de tu primer día 9.
+*  Probar Amazon Ads: Ejecuta campañas de prueba con bajo presupuesto para descubrir qué palabras clave generan más clics y afinar la descripción de tu libro 9.
+Fase 5: Lanzamiento Suave y Contenido A+ (Semana 2 - ¡Falta solo 1 semana!)
+*  Ejecutar el Lanzamiento Suave (Soft Launch): Publica el libro de manera discreta para comprobar que la visualización es correcta en todos los dispositivos y que los enlaces funcionan 10.
+*  Subir Contenido A+: Añada módulos visuales y detalles del interior en tu página de Amazon; esto alimenta a la IA de Amazon (Rufus) con palabras clave adicionales 10.
+*  Limpiar dudas del lector: Actualiza la descripción para resolver objeciones de compra (ej. "¿Es para principiantes?") y eliminar barreras mentales 11.
+*  Coordinar el "Street Team": Confirma con tus promotores más activos que tienen listo el contenido que compartirán durante la semana que viene 11.
+Fase 6: La Semana del Lanzamiento (Semana 1)
+*  Bajar el precio temporalmente: Configura el libro a $0.99 USD para ganar tracción masiva y facilitar las reseñas verificadas 12.
+*  Día 1 - El Impacto Inicial: Envía un correo a tu lista de suscriptores anunciando que el libro está vivo y activa campañas fuertes en Amazon Ads y Meta (Facebook/Instagram) 13.
+*  Días 2 y 3 - Sitios de terceros: Activa promociones pagadas en sitios de ofertas de libros como Bargain Booksy o ENT para mantener un volumen masivo de descargas 13, 14.
+*  Días 4 y 5 - Swaps y BookBub: Ejecuta intercambios de menciones en newsletters (swaps) con otros autores de tu mismo nicho y lanza anuncios en BookBub dirigidos a lectores de tu competencia 13, 14.
+*  Recordatorio de reseñas: Envía un correo a tu equipo ARC agradeciendo a quienes ya publicaron su reseña y dando un suave recordatorio a los que faltan 15, 16.
